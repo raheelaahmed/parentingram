@@ -1,1 +1,1 @@
-web: gunicorn parentigram.wsgi
+web: gunicorn parentingram.wsgi
