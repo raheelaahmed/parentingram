@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load crispy_forms_tags %}
+
 
 
 {% block content %}
 <div class="container mt-5">
     <div class="row">
-        <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'images/nobody.jpg' %}" width="75%">
+        <div class="col-12 col-md-6 text-center  img-fluid " >
+            <img class="img-fluid rounded-circle" src="{% static 'images/pp4 actity.jpg' %}" width="75%">
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-6">
             <h2>{{ about.title }}</h2>
             {{ about.content | safe }}
         </div>
