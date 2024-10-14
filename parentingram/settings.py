@@ -26,12 +26,13 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
+MY_API_KEY = os.environ.get('CLOUDINARY_URL')
 
 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-raheelaahme-parentingra-66vy4yoaie7.ws.codeinstitute-ide.net','.herokuapp.com']
 
