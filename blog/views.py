@@ -103,7 +103,7 @@ def comment_delete(request, slug, comment_id):
 
 
 
-def create_post(request, slug):
+def create_post(request,slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():

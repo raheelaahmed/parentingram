@@ -8,7 +8,7 @@ urlpatterns = [
     
     path('', views.PostList.as_view(), name='home'),
     
-    path('<slug:slug>/', views.create_post, name='create_post'),
+    path('<slug:slug>/create_post', views.create_post, name='create_post'),
 
     path('<slug:slug>/', views.post_detail, name='post_detail'),
     path('<slug:slug>/edit_comment/<int:comment_id>',
