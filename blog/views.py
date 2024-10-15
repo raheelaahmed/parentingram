@@ -15,6 +15,9 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+
+
+
 def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
@@ -100,14 +103,20 @@ def comment_delete(request, slug, comment_id):
 
 
 
-
-
-def create_post(request):
+def create_post(request, slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('post_list')  # Redirect to the post list view
+            return redirect('post_detail')  # Redirect to the post list view
     else:
-        form = PostForm()
-    return render(request, 'create_post.html', {'form': form})
+        form = PostForm()  # Create a new form instance for GET requests
+
+    return render(request,
+        "blog/create_post.html",
+        {
+            "form": form,
+        },
+    )
+
+   

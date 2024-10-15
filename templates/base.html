@@ -4,7 +4,8 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
-{% url 'create_post' as create_post_url %}
+{% url 'create_post' as create-post-url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +60,9 @@
                             {% endif %}
                             {% if user.is_authenticated %}
                             <li class="nav-item">
-                              <a class="nav-link" href="{{ create_post_url }}">Create</a>
+                                
+                                <a class="nav-link {% if request.path == create_post_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'create_post' slug='your-slug' %}">Create</a>
                             </li>
                             {% endif %}
 

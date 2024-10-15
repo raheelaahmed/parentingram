@@ -1,17 +1,21 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
 {% load static %}
 {% load crispy_forms_tags %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Create Post</title>
 </head>
 <body>
-    <h1>Create New Post</h1>
-    <form method="post" enctype="multipart/form-data">
+    <h1 class="card-title">Create New Post</h1>
+    <div class="create-form">
+    <form   method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Create Post</button>
+        <button id="create-post" type="submit">Create Post</button>
     </form>
+    </div>
 </body>
 </html>  
+{% endblock content %}

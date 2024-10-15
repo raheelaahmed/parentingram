@@ -11,4 +11,4 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['featured_image', 'title', 'slug', 'author', 'content', 'status',]        
+        fields = ['featured_image', 'title', 'slug', 'author', 'content', 'status',]
