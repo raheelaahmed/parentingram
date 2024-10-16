@@ -14,12 +14,13 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button id="create-post" type="submit">Create Post</button>
+        <button id="update-post" type="submit">Update</button>
        
-       <p id="post-success"> seccess</p>
+       <a href="{% url 'home' %}">Click here to see your post</a>
     </form>
     
     </div>
-
+    
  
 </body>
 </html>  

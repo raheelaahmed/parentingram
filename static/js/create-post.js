@@ -1,8 +1,7 @@
-
 function PostAlert() {
-  const postButton = document.getElementById("create-post");
+  const postButton = document.getElementById("post-success");
 
   postButton.addEventListener("click", () => {
-     document.getElementById("post-success")="your post has been successfully added to home page"
+    alert("Congratulations! Java is working!");
   });
 }
