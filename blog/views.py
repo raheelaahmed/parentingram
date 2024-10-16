@@ -108,15 +108,17 @@ def create_post(request,slug):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('post_detail')  # Redirect to the post list view
+            return redirect('home')
     else:
-        form = PostForm()  # Create a new form instance for GET requests
+        form = PostForm()  
 
     return render(request,
         "blog/create_post.html",
         {
             "form": form,
         },
+
     )
+   
 
    
