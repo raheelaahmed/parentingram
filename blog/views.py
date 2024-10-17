@@ -119,6 +119,9 @@ def create_post(request,slug):
         },
 
     )
+
+    def get_absolute_url(slug):
+        return reverse('post_detail')
    
 
    
