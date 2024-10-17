@@ -27,6 +27,8 @@
                 <p class="card-text">
                     {{ post.content | safe }}
                 </p>
+                <a href="{% url 'update_post' slug=post.slug %}">Edit Post</a>
+                <a href="{% url 'delete_post' slug=post.slug %}" onclick="return confirm('Are you sure you want to delete this post?');">Delete Post</a>
             </div>
         </div>
     </div>

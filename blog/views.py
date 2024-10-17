@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
+from django.views.generic.edit import UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -124,4 +125,35 @@ def create_post(request,slug):
         return reverse('post_detail')
    
 
-   
+class postUpdateView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = 'blog/update_post.html'
+
+
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'slug': self.object.slug})
+
+
+
+
+
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request, 'Post deleted successfully!')
+        return redirect('home')
+  # Redirect to the home page
+    else:
+        return render(request, 'blog/post_delete.html', {'post': post})
+
+      
+
+
+
+    
+
+
+
