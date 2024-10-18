@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -27,8 +28,16 @@
                 <p class="card-text">
                     {{ post.content | safe }}
                 </p>
+
+                {% if user.is_authenticated %} 
+                 {% if user.id == post.author.id %}
+                
                 <a href="{% url 'update_post' slug=post.slug %}">Edit Post</a>
+                {% endif %}
+                {% if user.is_superuser or user.id == post.author.id %}
                 <a href="{% url 'delete_post' slug=post.slug %}" onclick="return confirm('Are you sure you want to delete this post?');">Delete Post</a>
+                {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
