@@ -5,6 +5,7 @@
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 {% url 'create_post' as create-post-url %}
+{% url 'contact_us' as contact-url %}
 
 
 <!DOCTYPE html>
@@ -140,11 +141,11 @@
                 {% endblock content %}
         <!-- Footer-->
         <footer class="py-5 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Raheela Aftab 2024</p></div>
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Raheela Aftab 2024</p>
             
-
+            <a href="{% url 'contact' %}"> Contact Us</a>
                 
-        
+        </div>
             
         </footer>
         <!-- Bootstrap core JS-->
