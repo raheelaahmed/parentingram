@@ -9,12 +9,15 @@
 </head>
 <body>
     <h1 class="card-title">Contact Us</h1>
-    <div class="submit-form">
+    <div class="contact-form">
     <form  action="" method="post">
+       
         {% csrf_token %}
+        
         {{ form }}
-     
         <button id="submit-form" type="submit">Submit</button>
+   
+        
         
        
       

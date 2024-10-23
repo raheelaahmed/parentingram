@@ -10924,3 +10924,13 @@ header.masthead .bg-circle-4 {
   text-align: center;
   
 }
+
+/*contact form*/
+
+.contact-form{
+  text-align: center;
+  width:200px;
+  height:700px;
+  align-self: center;
+  margin:auto;
+}

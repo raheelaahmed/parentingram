@@ -29,7 +29,7 @@ def contact_view(request):
                 return HttpResponse('Invalid header found in form input')
 
             form.save()  # Save contact information to database (if applicable)
-            return redirect('contact_success')  # Redirect using URL pattern name
+            return redirect('contact')  # Redirect using URL pattern name
     else:
         form = ContactForm()
 
@@ -39,18 +39,7 @@ def contact_view(request):
 
 
 
-def contact_success(request):
-    model = Contact
-    contact_success = "Your message has been sent successfully!"  # Replace with your desired success message
 
-    return render(
-        request,
-        "contact_us/contact_success.html",
-        {'contact_success':contact_success
-
-        }
-        
-    )
 
 
 

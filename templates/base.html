@@ -6,6 +6,7 @@
 {% url 'account_logout' as logout_url %}
 {% url 'create_post' as create-post-url %}
 {% url 'contact_us' as contact-url %}
+{% url 'update_profile' as profile-url %}
 
 
 <!DOCTYPE html>
@@ -35,8 +36,11 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
                       
-                        
-                        
+                           
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page"
+                                href="{% url 'profile' %}">Profile</a>
+                        </li>
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                                     href="{% url 'home' %}">Home</a>

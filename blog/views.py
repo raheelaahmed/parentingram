@@ -152,7 +152,9 @@ def delete_post(request, slug):
       
 
 
+def update_profile(request):
 
+    pass
     
 
 
