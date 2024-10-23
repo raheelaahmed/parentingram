@@ -102,8 +102,7 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
-
+  #create post
 def create_post(request,slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
@@ -123,7 +122,8 @@ def create_post(request,slug):
 
     def get_absolute_url(slug):
         return reverse('post_detail')
-   
+
+  # update post 
 
 class postUpdateView(UpdateView):
     model = Post
@@ -155,6 +155,9 @@ def delete_post(request, slug):
 def update_profile(request):
 
     pass
+
+
+
     
 
 
