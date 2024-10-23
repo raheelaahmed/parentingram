@@ -10,15 +10,30 @@
 <body>
     <h1 class="card-title">Create New Post</h1>
     <div class="create-form">
-    <form   method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button id="create-post" type="submit">Create Post</button>
-        
-       
-      
-    </form>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
     
+            <button id="create-post" type="submit">Create Post</button>
+    
+            {% if form.errors %}
+                <p class="error">Please correct the errors below:</p>
+                <ul>
+                    {% for field in form %}
+                        {% if field.errors %}
+                            <li>
+                                {{ field.label }}: {{ field.errors|striptags }}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>   
+    
+            {% endif %}
+    
+            {% if form.is_valid %}
+                <p class="success">Post created successfully!</p>
+            {% endif %}
+        </form>
     </div>
     
  

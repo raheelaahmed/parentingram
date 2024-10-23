@@ -16,12 +16,18 @@
         
         {{ form }}
         <button id="submit-form" type="submit">Submit</button>
+
+
+    
    
         
         
        
       
     </form>
+    {% if form.is_valid %}
+    <p class="success">message sent successfully!</p>
+{% endif %}
     
     </div>
     

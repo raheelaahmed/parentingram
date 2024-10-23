@@ -104,6 +104,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -8167,7 +8168,7 @@ textarea.form-control-lg {
 
 .bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(241, 91, 181, var(--bs-bg-opacity)) !important;
 }
 
 .bg-white {
@@ -10923,4 +10924,7 @@ header.masthead .bg-circle-4 {
   text-align:center;
   width:500px;
   height:600px;
+}
+.py-5 bg-black{
+  background-color:F15BB5;
 }
