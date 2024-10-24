@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Contact
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
+from django.contrib import messages
 
 # Create your views here.
 
@@ -28,8 +29,12 @@ def contact_view(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found in form input')
 
-            form.save()  # Save contact information to database (if applicable)
-            return redirect('contact')  # Redirect using URL pattern name
+            form.save() 
+            success_message = "Your message has been sent successfully!"
+           
+             # Save contact information to database (if applicable)
+            return render(request,'contact.html', {"form":form, "success_message" : success_message}) 
+           # Redirect using URL pattern name
     else:
         form = ContactForm()
 

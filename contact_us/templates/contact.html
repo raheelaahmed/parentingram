@@ -9,29 +9,32 @@
 </head>
 <body>
     <h1 class="card-title">Contact Us</h1>
+
     <div class="contact-form">
+    
+    {% if success_message %}
+    <div class="alert alert-success">
+    {{ success_message }}
+    </div>
+    {% endif %}
+       
     <form  action="" method="post">
        
         {% csrf_token %}
         
         {{ form }}
-        <button id="submit-form" type="submit">Submit</button>
 
-
+      <button id="submit-form" type="submit">Submit</button>
     
-   
-        
-        
-       
-      
-    </form>
-    {% if form.is_valid %}
-    <p class="success">message sent successfully!</p>
-{% endif %}
+     </form>
+
     
     </div>
-    
- 
+
 </body>
 </html>  
 {% endblock content %}
+{% block extras %}
+<script src="{% static 'js/create-post.js' %}"></script>
+{% endblock %}
+
