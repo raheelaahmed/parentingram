@@ -107,9 +107,10 @@ def create_post(request,slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            post = form.save(commit=False)
+        post.content = request.POST.get('content')
             
-            return redirect('home')
+        return redirect('home')
     else:
         form = PostForm()  
 

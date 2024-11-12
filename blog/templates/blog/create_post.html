@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <title>Create Post</title>
 </head>
 <body>
@@ -12,7 +13,9 @@
     <div class="create-form">
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
+            
             {{ form.as_p }}
+           
     
             <button id="create-post" type="submit">Create Post</button>
     
@@ -36,10 +39,11 @@
         </form>
     </div>
     
- 
+  
 </body>
 </html>  
 {% endblock content %}
 {% block extras %}
 <script src="{% static 'js/create-post.js' %}"></script>
+
 {% endblock %}

@@ -104,7 +104,6 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -10920,11 +10919,18 @@ header.masthead .bg-circle-4 {
     font-size: 4rem;
   }
 }
-.submit-form{
-  text-align:center;
-  width:500px;
-  height:600px;
+/*creat form*/
+.create-form{
+  text-align: center;
+  
 }
-.py-5 bg-black{
-  background-color:F15BB5;
+
+/*contact form*/
+
+.contact-form{
+  text-align: center;
+  width:200px;
+  height:700px;
+  align-self: center;
+  margin:auto;
 }
