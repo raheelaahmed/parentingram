@@ -19,7 +19,7 @@ class PostList(generic.ListView):
 
 
 
-def post_detail(request, slug):
+def post_detail(request,slug):
     """
     Display an individual :model:`blog.Post`.
 
@@ -50,9 +50,7 @@ def post_detail(request, slug):
     
     comment_form = CommentForm()
 
-    return render(
-        request,
-        "blog/post_detail.html",
+    return render(request, 'post_detail.html',
         {
             "post": post,
             "comments": comments,
@@ -60,6 +58,8 @@ def post_detail(request, slug):
             "comment_form": comment_form
         },
     )
+
+    return redirect(post.get_absolute_url())
 
 
 def comment_edit(request, slug, comment_id):
@@ -150,12 +150,7 @@ def delete_post(request, slug):
     else:
         return render(request, 'blog/post_delete.html', {'post': post})
 
-      
 
-
-def update_profile(request):
-
-    pass
 
 
 
