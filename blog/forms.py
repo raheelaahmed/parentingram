@@ -1,7 +1,8 @@
 from .models import Comment, Post
 from django import forms
 from django_summernote.widgets import SummernoteWidget
-from django.utils.text import slugify
+
+
 
 
 
@@ -14,16 +15,17 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['featured_image', 'title', 'slug', 'author', 'content', 'status']
+        fields = ['featured_image', 'title','author', 'content', 'status']
         widgets = {
             'content': SummernoteWidget(),
         }
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
 
-        super().save(*args, **kwargs)  
+
+
+
+
+    
 
 
 
