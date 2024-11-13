@@ -1,6 +1,7 @@
 from .models import Comment, Post
 from django import forms
 from django_summernote.widgets import SummernoteWidget
+from django.utils.text import slugify
 
 
 
@@ -17,6 +18,12 @@ class PostForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+
+        super().save(*args, **kwargs)  
 
 
 

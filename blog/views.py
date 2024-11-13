@@ -50,7 +50,7 @@ def post_detail(request,slug):
     
     comment_form = CommentForm()
 
-    return render(request, 'post_detail.html',
+    return render(request,'post_detail.html',
         {
             "post": post,
             "comments": comments,
@@ -107,8 +107,13 @@ def create_post(request,slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-            post = form.save(commit=False)
-        post.content = request.POST.get('content')
+             post = form.save(commit=False)
+  # Prevent immediate saving
+
+            # Handle additional logic if needed (e.g., setting author)
+            # post.author = request.user  # Example: Set author to current user
+        post.save()
+    
             
         return redirect('home')
     else:
