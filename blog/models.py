@@ -38,8 +38,6 @@ class Post(models.Model):
         return f"{self.title} | written by {self.author}"
 
 
-    def get_absolute_url(self):
-        return reverse('post_detail', args=[self.slug])
 
 
     #comment model
@@ -58,3 +56,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
+
+
+
+
+      
+
+

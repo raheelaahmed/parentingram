@@ -15,8 +15,7 @@
             {% csrf_token %}
             
             {{ form.as_p }}
-           
-    
+
             <button id="create-post" type="submit">Create Post</button>
     
             {% if form.errors %}
@@ -44,6 +43,6 @@
 </html>  
 {% endblock content %}
 {% block extras %}
-<script src="{% static 'js/create-post.js' %}"></script>
+
 
 {% endblock %}

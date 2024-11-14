@@ -3,7 +3,7 @@ from django.views import generic
 from django.views.generic.edit import UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from .models import Post, Comment 
 from .forms import CommentForm
 from .forms import PostForm
 
@@ -50,14 +50,15 @@ def post_detail(request,slug):
     
     comment_form = CommentForm()
 
-    return render(request,'post_detail.html',
+    return render(request,'blog/post_detail.html',
         {
             "post": post,
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form
-        },
+       },
     )
+    
 
     return redirect(post.get_absolute_url())
 
@@ -104,15 +105,12 @@ def comment_delete(request, slug, comment_id):
 
   #create post
 def create_post(request,slug):
+    model = Post
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
              post = form.save(commit=False)
-  # Prevent immediate saving
-
-            # Handle additional logic if needed (e.g., setting author)
-            # post.author = request.user  # Example: Set author to current user
-        post.save()
+             post.save()
     
             
         return redirect('home')

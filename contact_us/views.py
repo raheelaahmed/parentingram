@@ -24,7 +24,7 @@ def contact_view(request):
   # Use the subject from the form
                     message=message,
                     from_email=email,  # Use the sender's email from the form
-                    recipient_list=['rania.crochet@gmail.com'],  # Replace with admin email
+                    recipient_list=['rania.crochet@gmail.com'], 
                 )
             except BadHeaderError:
                 return HttpResponse('Invalid header found in form input')
