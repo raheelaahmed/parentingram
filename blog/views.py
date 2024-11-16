@@ -137,6 +137,8 @@ class postUpdateView(UpdateView):
 
 
     def get_success_url(self): 
+
+        messages.success(self.request, "  your Post updated successfully!")
         
         return reverse('post_detail', kwargs={'slug': self.object.slug})
 
