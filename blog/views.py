@@ -104,16 +104,14 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
   #create post
-def create_post(request,slug):
+def create_post(request, slug):
     model = Post
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
-             post = form.save(commit=False)
-             post.save()
-    
-            
-        return redirect('home')
+            post = form.save(commit=False)
+            post.save()
+            success_message = "Your message has been sent successfully!"
     else:
         form = PostForm()  
 
@@ -122,11 +120,10 @@ def create_post(request,slug):
         {
             "form": form,
         },
-
     )
 
-    def get_absolute_url(slug):
-        return reverse('post_detail')
+def get_absolute_url(slug):
+        return reverse('post_detail', kwargs={'slug': self.object.slug})
 
 
 
@@ -138,7 +135,9 @@ class postUpdateView(UpdateView):
     template_name = 'blog/update_post.html'
 
 
-    def get_success_url(self):
+
+    def get_success_url(self): 
+        
         return reverse('post_detail', kwargs={'slug': self.object.slug})
 
 
