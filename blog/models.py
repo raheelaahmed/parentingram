@@ -20,7 +20,7 @@ class Post(models.Model):
     content = models.TextField(default="text")
     created_on = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(choices=STATUS, default=0)
-    excerpt = models.TextField(blank=True)
+   
     updated_on = models.DateTimeField(default=timezone.now)
 
 
