@@ -6,7 +6,7 @@
 {% url 'account_logout' as logout_url %}
 {% url 'create_post' as create-post-url %}
 {% url 'contact_us' as contact-url %}
-{% url 'update_profile' as profile-url %}
+{% url 'profile' as profile-url %}
 
 
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
                               
                             <li class="nav-item">
                                 <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
-                                    href="{% url 'about' %}">about</a>
+                                    href="{% url 'about' %}">About</a>
                             </li>
                             {% if user.is_authenticated %}
                             <li class="nav-item">
@@ -70,6 +70,13 @@
                                 <a class="nav-link {% if request.path == create_post_url %}active{% endif %}" aria-current="page"
                                 href="{% url 'create_post' slug='your-slug' %}">Create</a>
                             </li>
+                              
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == profile_url %}active{% endif %}" aria-current="page"
+                                    href="{% url 'profile' %}">Profile</a>
+                            </li>
+                           
+
                             {% endif %}
 
                     </ul>
@@ -145,7 +152,7 @@
                 <!-- Content Goes here -->
                 {% endblock content %}
         <!-- Footer-->
-        <footer class="py-5 bg-black">
+        <footer class="py-5 bg-black" >
             <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Raheela Aftab 2024</p>
             
             <a href="{% url 'contact' %}"> Contact Us</a>

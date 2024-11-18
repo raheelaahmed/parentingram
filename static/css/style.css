@@ -8168,6 +8168,7 @@ textarea.form-control-lg {
 .bg-black {
   --bs-bg-opacity: 1;
   background-color: black;
+  position: sticky;
 }
 
 .bg-white {
@@ -10935,9 +10936,5 @@ header.masthead .bg-circle-4 {
   margin:auto;
 }
 
-#id_slug {
-  display:none;
-}
-#id_slug label{
-  display:none;
-}
+
+
