@@ -22,10 +22,14 @@
             {{ form.as_p }}
 
             <button id="create-post" type="submit">Create Post</button>
-    
+   
+           
+          
+      
             {% if form.errors %}
                 <p class="error">Please correct the errors below:</p>
-                <ul>
+                <ul> 
+                   
                     {% for field in form %}
                         {% if field.errors %}
                             <li>
@@ -33,6 +37,7 @@
                             </li>
                         {% endif %}
                     {% endfor %}
+                    
                 </ul>   
     
             {% endif %}
@@ -41,7 +46,7 @@
         </form>
     </div>
     
-    <script src="{% static 'js/create-post.js' %}"></script>
+   <script src="{% static 'js/create-post.js' %}"></script>
 </body>
 </html>  
 {% endblock content %}

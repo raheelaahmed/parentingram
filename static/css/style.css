@@ -10934,3 +10934,10 @@ header.masthead .bg-circle-4 {
   align-self: center;
   margin:auto;
 }
+
+#id_slug {
+  display:none;
+}
+#id_slug label{
+  display:none;
+}
