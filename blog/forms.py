@@ -3,6 +3,8 @@ from django import forms
 from django_summernote.widgets import SummernoteWidget
 from django.forms.widgets import HiddenInput
 from django.utils.text import slugify
+from user.forms import UpdateProfileForm
+from user.models import Profile
 
 
 
@@ -17,10 +19,12 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['featured_image', 'title','slug','author', 'content', 'status']
+        fields = ['featured_image', 'title','author','slug', 'content', 'status']
+       
       
         labels = {
-            'slug': ""
+            'slug': "",
+            
         }
         
   
@@ -29,6 +33,7 @@ class PostForm(forms.ModelForm):
             'content': SummernoteWidget(),
            
         }
+        
 
       
 
