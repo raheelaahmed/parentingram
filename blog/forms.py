@@ -32,6 +32,10 @@ class PostForm(forms.ModelForm):
             'content': SummernoteWidget(),
            
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['author'].widget = forms.TextInput() 
         
 
       

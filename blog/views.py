@@ -110,6 +110,7 @@ def create_post(request, slug):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
+            post.author = request.user 
             post.save()
             success_message = "Your message has been sent successfully!"
     else:
