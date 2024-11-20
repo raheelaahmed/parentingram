@@ -642,7 +642,11 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+  
+  
 }
+
+
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -4177,7 +4181,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  /*border: var(--bs-card-border-width) solid var(--bs-card-border-color);*/
   border-radius: var(--bs-card-border-radius);
 }
 .card > hr {
@@ -10977,3 +10981,11 @@ header.masthead .bg-circle-4 {
  .messages{
   color:green;
  }
+
+.author{
+  display:none;
+}
+
+.card-text {
+  display:none;
+}

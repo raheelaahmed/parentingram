@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
+from django_summernote.admin import SummernoteModelAdmin
 from django.views.generic.edit import UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect

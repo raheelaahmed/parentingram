@@ -27,7 +27,7 @@
           
       
             {% if form.errors %}
-                <p class="error">Please correct the errors below:</p>
+                <p class="error" id="error-message">Please correct the errors below:</p>
                 <ul> 
                    
                     {% for field in form %}
@@ -45,10 +45,11 @@
 
         </form>
     </div>
+   
     
    <script src="{% static 'js/create-post.js' %}"></script>
 </body>
-</html>  
+</html>
 {% endblock content %}
 {% block extras %}
 
