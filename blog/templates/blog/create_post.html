@@ -14,7 +14,7 @@
   
     <div class="create-form">
         {% if form.is_valid %}
-        <p class="success">Congratulations, your Post created successfully! You can see it <a href="{% url 'home' %}">Explore</a>.</p>
+        <p class="create-success">Congratulations, your Post created successfully! You can see it <a href="{% url 'home' %}">Explore</a>.</p>
     {% endif %}
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
@@ -38,7 +38,7 @@
                         {% endif %}
                     {% endfor %}
                     
-                </ul>   
+                </ul>
     
             {% endif %}
     

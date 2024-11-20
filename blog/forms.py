@@ -19,10 +19,13 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['featured_image', 'title','author','slug', 'content', 'status']
+
+        
        
       
         labels = {
             'slug': "",
+            
             
         }
         
@@ -33,9 +36,7 @@ class PostForm(forms.ModelForm):
            
         }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['author'].widget = forms.TextInput() 
+  
         
 
       

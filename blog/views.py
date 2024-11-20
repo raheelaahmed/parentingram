@@ -110,7 +110,7 @@ def create_post(request, slug):
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = request.user 
+           
             post.save()
             success_message = "Your message has been sent successfully!"
     else:
@@ -125,6 +125,7 @@ def create_post(request, slug):
 
 def get_absolute_url(slug):
         return reverse('post_detail', kwargs={'slug': self.object.slug})
+      
 
 
 

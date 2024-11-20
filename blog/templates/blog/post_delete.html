@@ -6,13 +6,13 @@
 <h1>Confirm Delete</h1>
 <p>Are you sure you want to delete the post "{{ post.title }}"?</p>
 
+<p class = "note">Note: Your post will be deleted and you will not be able to access it anymore.</p>
+
+<p>If you want to delete, press the Delete button</p>
 
 <form method="POST">
-   
     {% csrf_token %}
-   
-   
-    <button type="submit">Delete</button>
+    <button type="submit" class="delete-post">Delete</button>
 </form>
 
 
