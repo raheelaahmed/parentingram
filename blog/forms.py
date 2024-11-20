@@ -3,8 +3,7 @@ from django import forms
 from django_summernote.widgets import SummernoteWidget
 from django.forms.widgets import HiddenInput
 from django.utils.text import slugify
-from user.forms import UpdateProfileForm
-from user.models import Profile
+
 
 
 
