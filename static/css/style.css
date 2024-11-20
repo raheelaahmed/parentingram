@@ -10911,6 +10911,9 @@ header.masthead .bg-circle-4 {
 }
 
 @media (min-width: 992px) {
+
+  
+  
   header.masthead {
     padding-top: calc(10rem + 55px);
     padding-bottom: 10rem;
@@ -10942,7 +10945,7 @@ header.masthead .bg-circle-4 {
 /* messages */
  /* cfreate post success */
  .create-success{
-  background-color:green;
+  color:green;
  }
 
  
@@ -10952,10 +10955,25 @@ header.masthead .bg-circle-4 {
  }
 
  .delete-post{
-  margin-bottom: 40px;
- }
- footer{
-  position:sticky;
+  margin-bottom: 60px;
  }
 
 
+
+
+ #button-signout{
+  margin-bottom: 150px;
+ }
+
+ .error{
+  color:red;
+ }
+
+
+ .errorlist{
+  color:red;
+ }
+
+ .messages{
+  color:green;
+ }
