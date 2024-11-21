@@ -10995,3 +10995,8 @@ header.masthead .bg-circle-4 {
 #id_slug input{
   display:none;
 }
+
+/* 404,403,405 page*/
+#page-error{
+  text-align:center;
+}

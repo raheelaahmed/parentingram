@@ -3,18 +3,56 @@ from django.views import generic
 from django_summernote.admin import SummernoteModelAdmin
 from django.views.generic.edit import UpdateView
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from .models import Post, Comment 
 from .forms import CommentForm
 from .forms import PostForm
 
 # Create your views here.
+"""def searchpost(request):
+    query = request.GET.get('q')
+    if query:
+        posts = Post.objects.filter(all) | Post.objects.filter(all)
+    else:
+        posts = []
+
+    context = {'posts': posts}
+    return render(request, 'blog/search_post.html', context)"""
+
+"""def searchpost(request):
+    query = request.GET.get('q')
+    if query:
+        posts=Post.objects.filter(query(Post.title==query) | query(Post.content==query)).values()
+    else:
+        posts = []
+
+    return render(request, 'blog/search_post.html', {'posts': posts})"""
 
 
+
+    
+def searchpost(request):
+    query = request.GET.get('q')
+
+    if query:
+        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query)
+    else:
+        posts = []
+
+    return render(request, 'blog/search_post.html', {'posts': posts, 'query': query})
+
+
+
+    
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
-    template_name = "blog/index.html"
-    paginate_by = 12
+        queryset = Post.objects.filter(status=1)
+        template_name = "blog/index.html"
+paginate_by = 12
+
+
+
+
+
 
 
 
@@ -159,6 +197,15 @@ def delete_post(request, slug):
   # Redirect to the home page
     else:
         return render(request, 'blog/post_delete.html', {'post': post})
+
+
+
+
+
+
+
+
+
 
 
 

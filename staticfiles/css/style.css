@@ -9,10 +9,7 @@
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-
  */
-
- 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -24,7 +21,7 @@
   --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
-  --bs-: #000;
+  --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
@@ -54,7 +51,7 @@
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
-  --bs--rgb: 0, 0, 0;
+  --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -94,8 +91,6 @@
   }
 }
 
-
-
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -107,6 +102,8 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
 }
 
 hr {
@@ -645,7 +642,11 @@ progress {
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-right: auto;
   margin-left: auto;
+  
+  
 }
+
+
 
 @media (min-width: 576px) {
   .container-sm, .container {
@@ -4180,7 +4181,7 @@ textarea.form-control-lg {
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
-  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  /*border: var(--bs-card-border-width) solid var(--bs-card-border-color);*/
   border-radius: var(--bs-card-border-radius);
 }
 .card > hr {
@@ -7790,7 +7791,6 @@ textarea.form-control-lg {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
-  margin-bottom: 0;
 }
 
 .pt-0 {
@@ -8080,9 +8080,9 @@ textarea.form-control-lg {
   color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text- {
+.text-black {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs--rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-white {
@@ -8100,7 +8100,7 @@ textarea.form-control-lg {
   color: #6c757d !important;
 }
 
-.text--50 {
+.text-black-50 {
   --bs-text-opacity: 1;
   color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -8171,9 +8171,10 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg- {
+.bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(241, 91, 181, var(--bs-bg-opacity)) !important;
+  background-color: black;
+  position: sticky;
 }
 
 .bg-white {
@@ -10914,6 +10915,9 @@ header.masthead .bg-circle-4 {
 }
 
 @media (min-width: 992px) {
+
+  
+  
   header.masthead {
     padding-top: calc(10rem + 55px);
     padding-bottom: 10rem;
@@ -10942,4 +10946,53 @@ header.masthead .bg-circle-4 {
 }
 
 
+/* messages */
+ /* cfreate post success */
+ .create-success{
+  color:green;
+ }
+
+ 
+ .note {
+  margin-top: 20px;
+  margin-bottom: 20px;
+ }
+
+ .delete-post{
+  margin-bottom: 60px;
+ }
+
+
+
+
+ #button-signout{
+  margin-bottom: 150px;
+ }
+
+ .error{
+  color:red;
+ }
+
+
+ .errorlist{
+  color:red;
+ }
+
+ .messages{
+  color:green;
+ }
+
+.author{
+  display:none;
+}
+
+.card-text {
+  display:none;
+}
+
+/* does not display slug to user */
+
+#id_slug input{
+  display:none;
+}
 

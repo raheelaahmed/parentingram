@@ -3,10 +3,10 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
-<div id="404">
-    <h1> Page not found </h1>
+<div id="page-errors">
+    <img src="{% static 'images/sorry.jpg' %}">
+    <h2> Sorry, the page you requested not found </h2>
+    <h3>Click <a href="{% url 'home' %}">here</a> to Explore.</h3>
 </div>
-
 
 {% endblock content %}
