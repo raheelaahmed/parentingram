@@ -10990,3 +10990,8 @@ header.masthead .bg-circle-4 {
   display:none;
 }
 
+/* does not display slug to user */
+
+#id_slug input{
+  display:none;
+}
