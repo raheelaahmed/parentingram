@@ -21,6 +21,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
    
     updated_on = models.DateTimeField(default=timezone.now)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
 
 
     class Meta:

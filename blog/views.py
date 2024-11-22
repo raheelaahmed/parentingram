@@ -7,56 +7,24 @@ from django.http import HttpResponseRedirect, HttpResponse
 from .models import Post, Comment 
 from .forms import CommentForm
 from .forms import PostForm
+from django.views.generic import View
 
 # Create your views here.
-"""def searchpost(request):
-    query = request.GET.get('q')
-    if query:
-        posts = Post.objects.filter(all) | Post.objects.filter(all)
-    else:
-        posts = []
-
-    context = {'posts': posts}
-    return render(request, 'blog/search_post.html', context)"""
-
-"""def searchpost(request):
-    query = request.GET.get('q')
-    if query:
-        posts=Post.objects.filter(query(Post.title==query) | query(Post.content==query)).values()
-    else:
-        posts = []
-
-    return render(request, 'blog/search_post.html', {'posts': posts})"""
 
 
 
-    
-def searchpost(request):
-    query = request.GET.get('q')
-
-    if query:
-        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query)
-    else:
-        posts = []
-
-    return render(request, 'blog/search_post.html', {'posts': posts, 'query': query})
 
 
 
+#home
     
 class PostList(generic.ListView):
         queryset = Post.objects.filter(status=1)
         template_name = "blog/index.html"
-paginate_by = 12
+        paginate_by = 12
 
 
-
-
-
-
-
-
-
+#post detail
 
 def post_detail(request,slug):
     """
@@ -69,12 +37,13 @@ def post_detail(request,slug):
 
     **Template:**
 
-    :template:`blog/post_detail.html`
+    :template:`blog/post_detail.html`"
     """
     queryset = Post.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -86,22 +55,24 @@ def post_detail(request,slug):
                 request, messages.SUCCESS,
                 'Comment submitted and awaiting approval'
             )
-    
-    comment_form = CommentForm()
+    else:
+        comment_form = CommentForm()
+  # Initialize comment form only on GET requests
 
-    return render(request,'blog/post_detail.html',
-        {
-            "post": post,
-            "comments": comments,
-            "comment_count": comment_count,
-            "comment_form": comment_form
-       },
-    )
-    
+    like_count = post.likes.count()  # Update like count for display
+
+    return render(request, 'blog/post_detail.html', {
+        "post": post,
+        "comments": comments,
+        "comment_count": comment_count,
+        "comment_form": comment_form,
+        "like_count": like_count,  # Add like count to context
+    })
 
     return redirect(post.get_absolute_url())
 
 
+ #comment edit
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -124,7 +95,7 @@ def comment_edit(request, slug, comment_id):
                                  'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
+#comment delete
 
 def comment_delete(request, slug, comment_id):
     """
@@ -186,7 +157,7 @@ class postUpdateView(UpdateView):
 
 
 
-
+#delete post
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
@@ -201,6 +172,40 @@ def delete_post(request, slug):
 
 
 
+  #search  
+def searchpost(request):
+    query = request.GET.get('q')
+
+    if query:
+        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query)
+    else:
+        posts = []
+
+    return render(request, 'blog/search_post.html', {'posts': posts, 'query': query})
+
+#post like
+"""class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        model = Post
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))"""
+
+def post_like(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+
+    if request.method == 'POST':
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
 
 
 
