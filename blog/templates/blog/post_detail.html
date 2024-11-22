@@ -47,11 +47,12 @@
                   {% if user.is_authenticated %}
                   <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                       {% csrf_token %}
-                      {% if liked %}
+                      {% if like_count%}
                       <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
                       {% else %}
                       <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
                       {% endif %}
+                      
                   </form>
                   {% else %}
                   <span class="text-secondary"><i class="far fa-heart"></i></span>

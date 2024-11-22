@@ -11000,3 +11000,20 @@ header.masthead .bg-circle-4 {
 #page-error{
   text-align:center;
 }
+
+/* heading h1 parentigram header */
+@media(max-width: 600px){
+  #parentigram-heading{
+  font-size: 3rem;
+
+}
+
+
+
+
+
+
+
+
+
+}
