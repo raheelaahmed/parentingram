@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-raheelaahme-parentingra-66vy4yoaie7.ws.codeinstitute-ide.net','.herokuapp.com']
 
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'about',
     'blog',
     'contact_us',
+    'coverage',
     
 ]
 
@@ -117,6 +118,9 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
 ]
+
+
+
 
 
 # Password validation
