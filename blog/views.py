@@ -177,7 +177,7 @@ def searchpost(request):
     query = request.GET.get('q')
 
     if query:
-        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query)
+        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query) |  Post.objects.filter(author__username__icontains=query)
     else:
         posts = []
 
