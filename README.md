@@ -24,63 +24,145 @@ https://www2.hse.ie/pregnancy-birth/preparing-for-a-new-baby/
 
 # Parentingram 
 
-![screenshot](documentation/mockup.png)
+![home-page](static/documents/screenshots/Home-page.png)
 
 
-Parentigram is community plateforrm for parents.
+As the name suggests, Parentingram is a community platform designed for parents. It's a place where parents can come together to share ideas, tips, and experiences related to parenting. You can find a variety of content, including healthy recipes, lunch ideas, educational posts, activity sheets, and information about local events and sports.
+The platform also allows you to engage with other parents by commenting on posts and expressing your likes or dislikes.
 
 ## UX
 
-The design philosophy was to create a simple, minimalistic look, which would be in stark contrast to the many cluttered and confusing sports club websites that the user will have undoubtedly come across. Relevant information is presented in a salient and refreshingly clean manner, allowing the user to easily and pleasingly navigate through the site.
+The design philosophy was to create a simple blog where user can see post and share posts and share their comment on other posts. 
 
 ### Colour Scheme
 
 
-The color scheme uses soft white and grey colors, with a strong "tennis style" dark-green accent which is present throughout the site.
+The color scheme uses bright full of life colors like(pink, orange, red, white and black color for footer) which is present throughout the site.
 
 
-I used [coolors.co](https://coolors.co/000000-333333-a1a1a1-f5f5f5-ffffff-507e50-507948-304f2a-263e21) to generate my colour palette.
+I used a bootstrap template to bring colors to my website which is linked below:
 
-![screenshot](documentation/coolors.png)
+[Bootstrap Template](https://github.com/StartBootstrap/startbootstrap-one-page-wonder/tree/master)
 
 
-### Typography
 
-- [Raleway](https://fonts.google.com/specimen/Raleway) was used for the primary headers, titles, and text content.
 
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+
 
 ## User Stories
 
 All user stories can be found in a linked GitHub project [here](https://github.com/users/raheelaahmed/projects/4)
 
 
-## Features
+## Features:
 
-## Existing Features
+Parentingram is community blog it has a number of features:
+
+* User can see posts
+* User can search the post in search bar by post title,content and authors name.
+* After logging in user canlike or dislike the posts.
+* After logging in User can comment on posts post.
+* After logging in User can make their own post using post form, update and delete their post.(user can only update or delete their own posts)
+* After loggin in User can send message to Admin.
+
+## Nav bar:
+
+Nav bar 6 items when user is not logged in.
+
+* PARENTINGRAM LOGO:
+
+logo is on the left side on Nav bar.
+
+* HOME:
+
+Home is the link for the homepage, when all the posts are displayed.
+
+* ABOUT:
+
+About the blog and its purpose.
+
+* REGISTER :
+
+Register page has a form so user can sign up for the form.
+
+* LOGIN:
+
+If your already a user you can lonin from this page or you can sign up as anew user as well.
+
+* SEARCH:
+
+This feature allows the user to search for the posts.
+
+![nav-bar](static/documents/screenshots/nav-bar-logout.png)
+
+
+Once you are loggedin then Create feature apears on Navbar.
+
+![nav-bar2](static/documents/screenshots/navbar-login.png)
+
+* LOGOUT:
+
+now you can see Logout, you can logout using this feature.
+
+* CREATE:
+
+This is very important feature of website, you can create your own post using this button. it only appears if you are loggedin on the website.
 
 ### Site Pages
 
 - **Homepage**
 
-    - The main homepage for the site. Hero image is large and striking. Large heading tells users they are in the right place. Call to action button to invite users to enter and explore the site.
+    - The main homepage for the site. All the posts are displayed on the this page, you can scroll up and down to see post, using next button you can go on next page to see more posts.
+    post images are displayed, user can open the post by clicking on the image.
 
-![screenshot](documentation/features/sitepages/home.png)
+![Home](static/documents/screenshots/home.png)
 
 - **About Page**
 
-    - About page. Gives users essential information about the tennis club. Text content interspersed with pictures helps to break up the page and keep the user engaged with the presented information. 
+    - About page. Gives users essential information about the blog and the purpose of the blog.
 
-![screenshot](documentation/features/sitepages/about.png)
+![About](static/documents/screenshots/about.png)
 
-- **News Page**
+- **Create Page**
 
-    - News Page. Displays news posts made by site staff. Users can see the most up-to-date information about events and other things happening at the club. Posts are paginated and displayed in a pleasing layout, utilising images to draw the user in.
+    - User can create a post using create post form, Post have 4 Fields(Image, Title, Author and content ). it is important to include first 3 fields other wise form will not work. User can publish the post on page after slecting published from  status list. your post will be posted on home page on clicking create Post button. you will recieve a success message with a link to view the post on home page.
 
-![screenshot](documentation/features/sitepages/news.png)
-![screenshot](documentation/features/sitepages/pagination.png)
+  ![create-post](static/documents/create-post.png)  
+
+
+
+
+- **Post_detail**
+
+
+User can see the post-detail page once click or taps on the post image on home page. It has post title, date when the post was created, author's name , image and content.
+if user is logged in then he can like or dislike the post and can make a comment on the post as well. If user is the author of the post he can edit or delete the post as well.
+If user is not logged in, he can see the post and deils but can not like, dislike and comment.
+
+
+
+![post-detail1](static/documents/post-deatil1.png)
+
+
+![post-detail2](static/documents/screenshots/post-deatil2.png)
+
+
+
+- **Update-post**
+
+If user is the author of the post then he can edit the post on clicking edit button on post detail page.
+once user click editpost button a new page is displayed with an update form on it ,user can make necessary changes and click on update button post will be updated and post detail will be opeded where user can see his updated post and a success message that you post ahve been updated.
+
+
+
+
+
+
+
+
 
 - **Contact Page**
+
 
     - Contact Page. Users can see contact information for the tennis club, including 
     a contact email address and location information. An embedded Google Maps widget allows users to see the club's exact location.
