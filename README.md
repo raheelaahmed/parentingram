@@ -154,7 +154,7 @@ If user is the author of the post then he can edit the post on clicking edit but
 once user click editpost button a new page is displayed with an update form on it ,user can make necessary changes and click on update button post will be updated and post detail will be opeded where user can see his updated post and a success message that you post ahve been updated.
 
 
-
+![update-post](static/documents/update-post.png)
 
 
 
@@ -164,47 +164,33 @@ once user click editpost button a new page is displayed with an update form on i
 - **Contact Page**
 
 
-    - Contact Page. Users can see contact information for the tennis club, including 
-    a contact email address and location information. An embedded Google Maps widget allows users to see the club's exact location.
+    - Contact Page. In the footer there is a link contact us, a new page will be opened on clicking contact us. it has a form and you can send direct messages to admin.
 
-![screenshot](documentation/features/sitepages/contact.png)
+![contact-us](static/documents/screenshots/contact-us.png)
 
 - **Register Page**
 
     - Register Page. Displays a form that new users of the site can fill in and make an account. The form is short, simple, and clean to encourage users to use it.
 
-![screenshot](documentation/features/sitepages/register.png)
+![Register](static/documents/screenshots/register.png)
 
 - **Login Page**
 
-    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A Forgot Password link takes users to another page where they can recover their password. A sign up button at the bottom of the page lets users who do not yet have an account easily find the register page
+    - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A sign up button at the bottom of the page lets users who do not yet have an account easily find the register page
 
-![screenshot](documentation/features/sitepages/login.png)
-
-- **Profile Page**
-
-    - Profile page. Displays a user's profile information. Lets a user see their relevant profile information in a clean and simple way, and contains an update form that users can use to update their profile information.
-
-![screenshot](documentation/features/sitepages/profile.png)
+![log-in](static/documents/screenshots/signin.png)
 
 
-- **My Reservations Page**
 
-    - My reservations page. Displays a formatted table populated with the user's upcoming court reservations. Users can easily see details of their reservations as well as links to a detail page of each reservation where it can be deleted if the user wishes.
 
-![screenshot](documentation/features/sitepages/my-reservations.png)
 
 - **Logout Page**
 
-    - Logout Page. A simple page confirming that the user has logged out of their account. Displays a log in again button in case the user wishes to log back in.
+    - Logout Page. A simple page confirming that the user has logged out of their account. 
 
-![screenshot](documentation/features/sitepages/logout.png)
+![log-out](static/documents/screenshots/signout.png)
 
-- **Reservation Page**
 
-    - Court reservation page. Displays a form for users to reserve a court at the tennis club. The form is simple and easy to use, with only two steps, letting the user quickly and easily make bookings. 
-
-![screenshot](documentation/features/sitepages/reservation-page.png)
 
 - **Custom Error Pages**
 
@@ -217,142 +203,51 @@ once user click editpost button a new page is displayed with an update form on i
 
 ### User Features
 
-- **User Registration**
 
-    - Users can register for an account using a front-end form. This creates a user object in the database and automatically secures the user's sensitive information.
+* User can see posts if he is not logged in.
+* User can open the post and see the full post.
+* User can search for the post in seach-bar in nav-bar.
 
-![screenshot](documentation/features/user/register.png)
+once user is logged in 
 
-- **User Login**
-
-    - Users who have made an account can quickly and easily log in to their account in order to access the login-required functionality of the site.
-
-![screenshot](documentation/features/user/login.png)
-
-- **User Logout**
-
-    - Users who are logged in can easily log out in order to stop access to their account-based information and functionality.
-
-![screenshot](documentation/features/user/logout.png)
-
-- **User Password Recovery**
-
-    - Users who have forgotten their password can recover their password via the forgot password link on the login page. Users will enter their email and get a password reset link sent to their account email which they can use to set a new password.
-
-![screenshot](documentation/features/user/password-recover.png)
-
-- **Login Dependant Navbar Links**
-
-    - Users who are logged in see new links in the navbar. 'Register' and 'Login' links are replaced with 'My Account' and 'Reserve A Court' links. This provides the user with visual feedback upon logging in, as well as removing links that they will not need.
-
-![screenshot](documentation/features/user/login-navbar-links.png)
-
-- **Login Redirect**
-
-    - Users who are not logged in who attempt to access an area of the site which requires login are redirected to the login page. After logging in, they are sent to the page they first intended to visit.
-
-![screenshot](documentation/features/user/login-redirect.png)
-
-- **User Profile Creation**
-
-    - User profiles are automatically created upon user registration. This assigns each user a profile which they can use to see/update their user information.
-
-![screenshot](documentation/features/user/profile-creation.png)
-
-- **User Profile Update**
-
-    - Users can update their profile information using a front-end form located on their user profile page. This allows users to update profile information or correct possible mistakes made at registration.
-
-![screenshot](documentation/features/user/profile-update.png)
-
-- **User Court Reservations**
-
-    - Users can use a front-end form to reserve a court to play tennis at the tennis club. Users are presented with a very simple form, which is easy to fill out, and allows them to quickly 
-      make reservations.
-
-      The reservation form contains two steps. First, the user is prompted to select the date on which they would like to play, dates in the past are automatically disabled. Next,the user is prompted to choose the timeslot at which they would like to play. Timeslots are automatically presented according to the club's opening hours.
-
-![screenshot](documentation/features/user/court-reservation.png)
-
-- **Automatic Timeslot Availability Checking**
-
-    - In the court reservation form, when selecting a timeslot, users can see which timeslots are fully booked, as well as timeslots which have limited availability on their chosen date. Timeslots which are fully booked (all 9 courts already booked at that time) are automatically disabled and unselectable by the user. Timeslots which have limited availability (courts with 6 to 8 bookings) are automatically colored orange and the user can see a 'limited availaility' message beside the timeslot.
-
-![screenshot](documentation/features/user/timeslot-availability.png)
-
-- **Automatic Court Assignment**
-
-    - In the court reservation form, users do not need to select a court on which to play. Instead, the backend functionality of the form automatically assigns the user an available court based on the amount of bookings that have already been placed on the selected date and timeslot.
-
-![screenshot](documentation/features/user/court-assignment.png)
-
-- **User Email Confirmations**
-
-    - After making a reservation, the site automatically sends the user a confirmation email which contains their reservation details, as well as instructions on how to cancel the reservation.
-
-![screenshot](documentation/features/user/email-confirmation1.png)
-![screenshot](documentation/features/user/email-confirmation2.png)
-
-- **User Reservation Cancellation**
-
-    - Users can cancel their existing reservations using front-end functionality on the site, without having to call or visit the tennis club. On the reservation details page, users can see a clear and obvious 'cancel reservation' button which will take them to a confirmation page, before deleting their reservation. 
-
-![screenshot](documentation/features/user/cancel-reservation.png)
-
-### Admin/Staff Features
-
-- **Create News Posts**
-
-    - Administrators can use a front-end form to create new site news posts. The form is simple and clean and automatically formats and displays the created post in the same manner as existing posts.
-
-![screenshot](documentation/features/admin/create-post.png)
-
-- **Update News Posts**
-
-    - Administrators can use a front-end form to update existing posts. If the current logged-in user has staff privileges, an update button will appear over posts which allows that user to edit the information in posts.
-
-![screenshot](documentation/features/admin/update-post.png)
-
-- **Delete News Posts**
-
-    - Administrators can use a front-end form to delete existing posts. If the current logged-in user has staff privileges, an delete button will appear over posts which allows that user to delete that post.
-
-![screenshot](documentation/features/admin/delete-post.png)
-
-- **Latest News Posts On Homepage**
-
-    - The most recent post, along with the two next-most recent posts are automatically displayed on the homepage. This allows users of the site to see the most up-to-date site news at a glance.
-
-![screenshot](documentation/features/admin/homepage-news.png)
-
-- **Master Reservation List**
-
-    - Administrators have access to a master list of all the club reservations. The list is ordered by reverse date by default, which helps to show administrators the most relevant reservations first. There are two search boxes at the top of the list page, which can be used to find reservations on certain dates, or to find reservations made by a specific user.
-
-![screenshot](documentation/features/admin/reservation-list.png)
-
-- **Delete Reservations For Users**
-
-    - Administrators, using the master reservation list, can view the details of another user's reservation, as well as delete that reservation on behalf of that user.
-
-![screenshot](documentation/features/admin/reservation-delete.png)
+* A new CREATE button apears in nav-bar, User can create his own post using font end form.
+* User can update and delete the post if they are the author of the post.
+* User can leave a comment on the posts.
+* User can edit and delete their own comments.
+* User can like/unlike the post.
+* user can send messages to admin through contact us.
 
 
-### Future Features
+
+### Admin Features
+
+* on the front end Admin can craete the post using create form.
+* Admin can update and delete their own posts.
+* Admin can delete all posts.
+* Admin can like/dislike posts.
+* Admin can post comment on the posts.
+
+on the admin pannel
+
+* Admin can create post,update post,delete posts.
+* Admin can aprrove comments.
+* Admin can update about page.
+* Admin can see message sent by user.
+* Admin recieve the users messages in email as well.
+* Admin can update and delete all post using admin pannel.
 
 
-- Update Reservations
-    - A user can edit their reservation, without deleting it and creating a new one. 
-         - Not in this deployment due to it breaking the automatic availability checks and automatic court assignment. Needs a restructure of reservation system to be implemented. 
-- Advanced reservation actions for admins
-    - An admin can make more advanced reservation actions, such as:
-        - block booking timeslots
-        - recurring reservations
-        - changing of available reservation dates
-        - changing of available timeslots and courts
-        - mass deletion/creation of reservations
-- Online Payment System
-    - Users can pay the cost of their court reservation online
+
+
+
+
+
+
+
+
+
+
+
 
 ## Tools & Technologies Used
 
@@ -380,21 +275,13 @@ once user click editpost button a new page is displayed with an update form on i
 
 While planning this project, I drew up an Entity Relationship Diagram to help me to visualise the database models and their relationships. 
 
-![screenshot](documentation/erd.png)
+![er-diagram](static/documents/screenshots/erdiagram.png)
 
 
 ## Agile Development Process
 
 ### GitHub Projects
 
-[GitHub Projects](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/projects) served as an Agile tool for this project.
-It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
-
-Through it, user stories, issues, and tasks were planned, then tracked on a weekly basis using the basic Kanban board.
-
-The [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) method was used with accompanying custom Github project labels to help me to prioritise the important tasks in the time I had available.
-
-![screenshot](documentation/gh-projects.png)
 
 ### GitHub Issues
 
@@ -410,15 +297,7 @@ There, I used my own **User Story Template** to manage user stories.
 
     ![screenshot](documentation/gh-issues-closed.png)
 
-### MoSCoW Prioritization
 
-I've decomposed my Epics into stories prior to prioritizing and implementing them.
-Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
-
-- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
-- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
-- **Could Have**: has small impact if left out (*20% of stories*)
-- **Won't Have**: not a priority for this iteration
 
 ## Testing
 

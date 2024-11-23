@@ -1,5 +1,6 @@
-
+{% extends 'base.html' %} 
 {% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 
 
@@ -8,5 +9,6 @@
     <h2> Sorry, the page you requested not found </h2>
     <h3>Click <a href="{% url 'home' %}">here</a> to Explore.</h3>
 </div>
+
 
 {% endblock content %}
