@@ -278,7 +278,34 @@ While planning this project, I drew up an Entity Relationship Diagram to help me
 ![er-diagram](static/documents/screenshots/erdiagram.png)
 
 
-## Agile Development Process
+## Django project Parentingram:
+
+I have craeted a project named as Parentingram. It has 3 apps
+
+* blog
+* about
+* contact us
+
+### blog:
+
+* blog app has 2 models in model.py Post and Comment.
+* blog app has 6 main html pages in templates and error pages.
+main pages are Home page (index.html), post detail page(post_detail.html), template for creating posts(create_post), (post_delete.html) and (update_post.html) for deleting and updating post. finally it has page for search feature(search_post) all the search result are dispalyed on this page.
+* blog app has views for all the templates in views.py file.
+* blog app has all the url for views in urls.py.
+* blog app has form.py which has all the form used for createing and updating posts it has comment form as well.
+
+
+
+### about:
+
+* about app has one model About for about page.
+* about app has one page about and error pages.
+
+
+
+
+
 
 ### GitHub Projects
 
