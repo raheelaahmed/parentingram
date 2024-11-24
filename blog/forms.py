@@ -28,6 +28,7 @@ class PostForm(forms.ModelForm):
         fields = ['featured_image', 'title', 'author', 'slug', 'content', 'status']
         labels = {
             'slug': "", 
+            
         }
         widgets = {
             'content': SummernoteWidget(),

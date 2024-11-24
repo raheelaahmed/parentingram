@@ -301,6 +301,18 @@ main pages are Home page (index.html), post detail page(post_detail.html), templ
 
 * about app has one model About for about page.
 * about app has one page about and error pages.
+* about app has veiws in views.py.
+* about app has url for in urls.py.
+
+
+### contact_us:
+
+* contact_us app is used to send messages to admin.
+* contact_us app has its model in model.py.
+* contact_us app has views in views.py.
+* contact_us app has contact-form in form.py as app send mesaages using front end form.
+* contact_us app has 1 main template that a form to send messages.
+* contact_us app has url in urls.py file.
 
 
 

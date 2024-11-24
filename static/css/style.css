@@ -16,8 +16,8 @@
   --bs-purple: #6f42c1;
   --bs-pink: #ee0979;
   --bs-red: #dc3545;
-  --bs-orange: #ff6a00;
-  --bs-yellow: #ffc107;
+  --bs-orange: #b08c73;
+  --bs-yellow: #f3ce61;
   --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
@@ -35,7 +35,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #ee0979;
-  --bs-secondary: #ff6a00;
+  --bs-secondary: #fcc39b;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -10965,6 +10965,8 @@ header.masthead .bg-circle-4 {
 
 
 
+
+
  #button-signout{
   margin-bottom: 150px;
  }
@@ -11016,4 +11018,9 @@ header.masthead .bg-circle-4 {
 
 .contact-form{
   text-align: center;
+}
+
+
+.image-container {
+ text-align: center;
 }
