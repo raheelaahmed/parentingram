@@ -8,6 +8,8 @@ from .models import Post, Comment
 from .forms import CommentForm
 from .forms import PostForm
 from django.views.generic import View
+from django.contrib.auth.decorators import login_required 
+
 
 # Create your views here.
 
@@ -119,6 +121,8 @@ def create_post(request, slug):
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
+
+            
             post = form.save(commit=False)
            
             post.save()
@@ -135,6 +139,9 @@ def create_post(request, slug):
 
 def get_absolute_url(slug):
         return reverse('post_detail', kwargs={'slug': self.object.slug})
+
+
+
       
 
 
@@ -153,6 +160,8 @@ class postUpdateView(UpdateView):
         messages.success(self.request, "  your Post updated successfully!")
         
         return reverse('post_detail', kwargs={'slug': self.object.slug})
+
+ 
 
 
 
