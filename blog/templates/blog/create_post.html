@@ -33,6 +33,8 @@
                     <ul> 
                        
                         {% for field in form %}
+
+                        <select name="author" id="id_author" style="display:none;"></select>
                             {% if field.errors %}
                                 <li>
                                     {{ field.label }}: {{ field.errors|striptags }}

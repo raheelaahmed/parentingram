@@ -27,8 +27,8 @@ class CommentForm(forms.ModelForm):
 class PostForm(forms.ModelForm,):
     class Meta:
         model = Post
-        fields = ['featured_image', 'title','author','slug', 'content', 'status']
-        
+        fields = ['featured_image', 'title','slug', 'content', 'status']
+      
        
         labels = {
             'slug': "", 
@@ -38,10 +38,11 @@ class PostForm(forms.ModelForm,):
         }
         widgets = {
             'content': SummernoteWidget(),
+           
         }
 
 
-       
+
 
 
 

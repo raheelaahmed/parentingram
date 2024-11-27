@@ -3,12 +3,14 @@ from django.views import generic
 from django_summernote.admin import SummernoteModelAdmin
 from django.views.generic.edit import UpdateView
 from django.contrib import messages
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse, HttpResponseForbidden
 from .models import Post, Comment 
 from .forms import CommentForm
 from .forms import PostForm
 from django.views.generic import View
 from django.contrib.auth.decorators import login_required 
+
+
 
 
 # Create your views here.
@@ -116,26 +118,44 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
   #create post
+
+
+
+
+
 def create_post(request, slug):
     model = Post
-    if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)
-        if form.is_valid():
 
-            
+    if request.method == 'POST':
+        # Create form with current user as author (if applicable)
+        if request.user.is_authenticated:
+            author = request.user
+        else:
+            # Handle case where user is not authenticated (optional)
+            author = None  # Or set a default author if desired
+
+        form = PostForm(request.POST, request.FILES, initial={'author': author})
+
+        if form.is_valid():
             post = form.save(commit=False)
-           
+            post.author = author  # Explicitly set author if necessary
             post.save()
-            success_message = "Your message has been sent successfully!"
+            success_message = "Your post has been created successfully!"
+            return redirect('post_detail', slug=post.slug)  # Redirect to detail view
+
     else:
-        form = PostForm()  
+        form = PostForm()
 
     return render(request,
-        "blog/create_post.html",
-        {
-            "form": form,
-        },
+                  "blog/create_post.html",
+                  {
+                      "form": form,
+                
+                  },
     )
+
+
+
 
 def get_absolute_url(slug):
         return reverse('post_detail', kwargs={'slug': self.object.slug})
@@ -177,6 +197,11 @@ def delete_post(request, slug):
   # Redirect to the home page
     else:
         return render(request, 'blog/post_delete.html', {'post': post})
+
+
+
+ 
+
 
 
 
