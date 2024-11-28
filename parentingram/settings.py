@@ -20,23 +20,16 @@ import sys
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-
-
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-raheelaahme-parentingra-66vy4yoaie7.ws.codeinstitute-ide.net','.herokuapp.com']
-
-
+ALLOWED_HOSTS = ['8000-raheelaahme-parentingra-66vy4yoaie7.ws.\
+codeinstitute-ide.net', '.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
@@ -46,21 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-      'django.contrib.sites',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-     'crispy_forms',
+    'crispy_forms',
     'crispy_bootstrap5',
-     'cloudinary_storage',
+    'cloudinary_storage',
     'django_summernote',
-     'cloudinary',
+    'cloudinary',
     'about',
     'blog',
     'contact_us',
-    
-    
-]
+    ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -101,40 +92,30 @@ TEMPLATES = [
 WSGI_APPLICATION = 'parentingram.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+"""# Database
+ https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-#DATABASES = {
- # 'default': {
-#  'ENGINE': 'django.db.backends.sqlite3',
- #   'NAME': BASE_DIR / 'db.sqlite3',
- #}
-#}
+DATABASES = {
+ 'default': {
+  'ENGINE': 'django.db.backends.sqlite3',
+   'NAME': BASE_DIR / 'db.sqlite3',
+}
+}"""
 
 DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-
-
-    
 }
 
-
 if 'test' in sys.argv:
-# Use SQLite database for testing
     DATABASES['default'] = {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': ':memory:',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': ':memory:',
     }
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com",
-    
-]
-
-
-
-
+    ]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -188,8 +169,6 @@ EMAIL_PORT = 587  # Adjust port if needed
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
-
-
 
 
 # Default primary key field type

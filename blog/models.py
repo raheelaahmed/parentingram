@@ -5,23 +5,19 @@ from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
 
-
-
 # post model
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-
 class Post(models.Model):
     featured_image = CloudinaryField('image',)
-    title = models.CharField(max_length=200,unique=True)
+    title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     author = models.ForeignKey(
-        User,default= User, on_delete=models.CASCADE)
+        User, default=User, on_delete=models.CASCADE)
     content = models.TextField(blank=False)
     created_on = models.DateTimeField(default=timezone.now)
     status = models.IntegerField(choices=STATUS, default=0)
-   
     updated_on = models.DateTimeField(default=timezone.now)
     likes = models.ManyToManyField(
         User, related_name='blogpost_like', blank=True)
@@ -41,9 +37,7 @@ class Post(models.Model):
         return f"{self.title} | written by {self.author}"
 
 
-
-
-    #comment model
+# comment model
 
 class Comment(models.Model):
     post = models.ForeignKey(
@@ -59,7 +53,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.author}"
-
 
 
 

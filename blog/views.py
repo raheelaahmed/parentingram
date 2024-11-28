@@ -4,33 +4,24 @@ from django_summernote.admin import SummernoteModelAdmin
 from django.views.generic.edit import UpdateView
 from django.contrib import messages
 from django.http import HttpResponseRedirect, HttpResponse, HttpResponseForbidden
-from .models import Post, Comment 
+from .models import Post, Comment
 from .forms import CommentForm
 from .forms import PostForm
 from django.views.generic import View
-from django.contrib.auth.decorators import login_required 
-
-
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
-
-
-
-
-
-
-#home
-    
+# Home Views
 class PostList(generic.ListView):
-        queryset = Post.objects.filter(status=1)
-        template_name = "blog/index.html"
-        paginate_by = 12
+    queryset = Post.objects.filter(status=1)
+    template_name = "blog/index.html"
+    paginate_by = 6
 
 
-#post detail
+# post detail view
 
-def post_detail(request,slug):
+def post_detail(request, slug):
     """
     Display an individual :model:`blog.Post`.
 
@@ -61,7 +52,7 @@ def post_detail(request,slug):
             )
     else:
         comment_form = CommentForm()
-  # Initialize comment form only on GET requests
+# Initialize comment form only on GET requests
 
     like_count = post.likes.count()  # Update like count for display
 
@@ -76,7 +67,7 @@ def post_detail(request,slug):
     return redirect(post.get_absolute_url())
 
 
- #comment edit
+# comment edit
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -99,7 +90,9 @@ def comment_edit(request, slug, comment_id):
                                  'Error updating comment!')
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-#comment delete
+
+# comment delete
+
 
 def comment_delete(request, slug, comment_id):
     """
@@ -117,10 +110,7 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-  #create post
-
-
-
+# create post
 
 
 def create_post(request, slug):
@@ -138,7 +128,7 @@ def create_post(request, slug):
 
         if form.is_valid():
             post = form.save(commit=False)
-            post.author = author  # Explicitly set author if necessary
+            post.author = author
             post.save()
             success_message = "Your post has been created successfully!"
             return redirect('post_detail', slug=post.slug)  # Redirect to detail view
@@ -150,23 +140,15 @@ def create_post(request, slug):
                   "blog/create_post.html",
                   {
                       "form": form,
-                
                   },
-    )
-
-
+                  )
 
 
 def get_absolute_url(slug):
-        return reverse('post_detail', kwargs={'slug': self.object.slug})
+    return reverse('post_detail', kwargs={'slug': self.object.slug})
 
 
-
-      
-
-
-
-  # update post 
+# update post
 
 class postUpdateView(UpdateView):
     model = Post
@@ -181,12 +163,9 @@ class postUpdateView(UpdateView):
         
         return reverse('post_detail', kwargs={'slug': self.object.slug})
 
- 
+# delete post
 
 
-
-
-#delete post
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
@@ -194,30 +173,23 @@ def delete_post(request, slug):
         post.delete()
         messages.success(request, 'Post deleted successfully!')
         return redirect('home')
-  # Redirect to the home page
+# Redirect to the home page
     else:
         return render(request, 'blog/post_delete.html', {'post': post})
 
 
-
- 
-
-
-
-
-
-  #search  
+# search view
 def searchpost(request):
     query = request.GET.get('q')
 
     if query:
-        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query) |  Post.objects.filter(author__username__icontains=query)
+        posts = Post.objects.filter(title__icontains=query) | Post.objects.filter(content__icontains=query) | Post.objects.filter(author__username__icontains=query)
     else:
         posts = []
 
     return render(request, 'blog/search_post.html', {'posts': posts, 'query': query})
 
-#post like
+# post like view
 
 
 def post_like(request, slug):
@@ -229,7 +201,21 @@ def post_like(request, slug):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 

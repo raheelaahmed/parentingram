@@ -11028,3 +11028,10 @@ header.masthead .bg-circle-4 {
   display:block
 }
 
+/* Error-pages*/
+
+#page-errors{
+  text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

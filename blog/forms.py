@@ -7,10 +7,6 @@ from django_summernote.admin import SummernoteModelAdmin
 from django.contrib.auth.models import User
 
 
-
-
-
-
 # comment form
 
 class CommentForm(forms.ModelForm):
@@ -19,27 +15,18 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-
-
-
-  
-# create and update post form        
+# create and update post form
 class PostForm(forms.ModelForm,):
     class Meta:
         model = Post
-        fields = ['featured_image', 'title','slug', 'content', 'status']
-      
-       
+        fields = ['featured_image', 'title', 'slug', 'content', 'status']
         labels = {
-            'slug': "", 
-            
-            
-            
-        }
+            'slug': "",
+                 }
         widgets = {
             'content': SummernoteWidget(),
-           
-        }
+            }
+
 
 
 

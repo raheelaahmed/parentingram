@@ -1,7 +1,5 @@
-"""
-URL configuration for parentingram project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+"""The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
@@ -24,14 +22,10 @@ urlpatterns = [
    path('admin/', admin.site.urls),
    path("contact/", include("contact_us.urls"), name="contact-urls"),
    path("about/", include("about.urls"), name="about-urls"),
-   
    path("", include("blog.urls"), name="blog-urls"),
    path("accounts/", include("allauth.urls")),
    path('summernote/', include('django_summernote.urls')),
-     
-]
-
-
+   ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

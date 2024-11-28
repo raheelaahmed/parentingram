@@ -4,5 +4,5 @@ from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Contact)
-class AboutAdmin(SummernoteModelAdmin):
+class ContactAdmin(SummernoteModelAdmin):
     summernote_fields = ('message',)
