@@ -16,7 +16,7 @@
         <div class="create-form">
             {% if form.is_valid %}
             <p class="create-success">Congratulations, your Post created successfully! You can see it <a href="{% url 'home' %}">Here</a>.</p>
-        {% endif %}
+            {% endif %}
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 
@@ -31,27 +31,22 @@
                 {% if form.errors %}
                     <p class="error" id="error-message">Please correct the errors below:</p>
                     <ul> 
-                       
                         {% for field in form %}
-
-                        <select name="author" id="id_author" style="display:none;"></select>
-                            {% if field.errors %}
+                        {% if field.errors %}
                                 <li>
                                     {{ field.label }}: {{ field.errors|striptags }}
                                 </li>
                             {% endif %}
                         {% endfor %}
-                        
-                    </ul>
-        
-                {% endif %}
-    </form>    
-    </div>
+                        </ul>
+                         {% endif %}
+                         </form> 
+                         </div>
    
     
-   <script src="{% static 'js/create-post.js' %}"></script>
-</body>
-</html>
+                      <script src="{% static 'js/create-post.js' %}"></script>
+                      </body>
+                       </html>
 {% endblock content %}
 {% block extras %}
 

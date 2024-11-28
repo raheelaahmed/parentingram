@@ -1,22 +1,3 @@
-i used this bootstrap template for the project https://github.com/StartBootstrap/startbootstrap-one-page-wonder/blob/master/dist/index.html
-
-https://github.com/startbootstrap/startbootstrap-one-page-wonder?tab=readme-ov-file#start-bootstrap---one-page-wonder
-
-
-
-pictures from Shuttersstocks,pexels
-post from 
-https://www.psychologytoday.com/ie/basics/parenting#:~:text=Ultimately%2C%20parents%20should%20strive%20to,Essential%20Reads
-
-helthy habits artical from https://mentalhealthcenterkids.com/blogs/articles/healthy-habits-for-kids#:~:text=Good%20habits%20to%20develop%20include,gratitude%2C%20and%20self%2Dcare.
-
-worksheet from here. https://www.worksheetplace.com/index.php?function=DisplayCategory&showCategory=Y&links=2&id=376&link1=31&link2=376&cn=Feelings_Activities
-
-
-website i used for data:
-https://kidshealth.org/en/parents/homework.html
-
-https://www2.hse.ie/pregnancy-birth/preparing-for-a-new-baby/
 
 
 
@@ -196,10 +177,6 @@ once user click editpost button a new page is displayed with an update form on i
 
     - Custom error handler pages. These pages display when a user encounters one of the following common errors: 400, 403, 404, 500. These provide a more user-friendly error page than the user would see otherwise and includes an informative message and button to return home to the site. 
 
-![screenshot](documentation/features/sitepages/400.png)
-![screenshot](documentation/features/sitepages/403.png)
-![screenshot](documentation/features/sitepages/404.png)
-![screenshot](documentation/features/sitepages/500.png)
 
 ### User Features
 
@@ -324,18 +301,6 @@ main pages are Home page (index.html), post detail page(post_detail.html), templ
 
 ### GitHub Issues
 
-[GitHub Issues](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories.
-
-
-- [Open Issues](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/issues)
-
-    ![screenshot](documentation/gh-issues-open.png)
-
-- [Closed Issues](https://github.com/LewisMDillon/bushy-park-tennis-club-ld/issues?q=is%3Aissue+is%3Aclosed)
-
-    ![screenshot](documentation/gh-issues-closed.png)
-
 
 
 ## Testing
@@ -344,7 +309,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-The live deployed application can be found deployed on [Heroku](https://bushy-park-tennis-club-896947b1504e.herokuapp.com).
+The live deployed application can be found deployed on [Heroku](https://parentigram-0cf4fc00ca66.herokuapp.com).
 
 ### ElephantSQL Database
 
@@ -448,28 +413,23 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/LewisMDillon/bushy-park-tennis-club-ld) 
+1. Go to the [GitHub repository](https://github.com/raheelaahmed/parentingram/tree/main) 
 2. Locate the Code button above the list of files and click it 
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/LewisMDillon/bushy-park-tennis-club-ld.git`
+	- [`git clone'](https://github.com/raheelaahmed/parentingram/tree/main)
 7. Press Enter to create your local clone.
 
-Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/LewisMDillon/bushy-park-tennis-club-ld)
-
-Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
-A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
 
 #### Forking
 
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/LewisMDillon/bushy-park-tennis-club-ld)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/raheelaahmed/parentingram/tree/main)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
@@ -479,44 +439,49 @@ The local version, created on Gitpod, does not have the functionality to send co
 
 ## Credits
 
-### Content
 
-| Source | Location | Notes |
-| --- | --- | --- |
-| [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/questions/3005080/how-to-send-html-email-with-django-with-dynamic-content-in-it) | reservations/views.py | Django sendmail function with dynamic content |
-| [Stack Overflow](https://stackoverflow.com/questions/15795869/django-modelform-to-have-a-hidden-input) | Reservation Form | Hide inputs on a Django built-in model form
-| [YouTube](https://www.youtube.com/watch?v=vmP1r6xiJog) | Reservation Form | passing data from one page to another in Django |
-| [Youtube - Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) | entire site | how to set up a Django Project
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [Bootstrap Components](https://getbootstrap.com/docs/5.3/examples/) | Navbar, Hero, About, Jumbotron, Footer | pre-built bootstrap components
-| [Date Picker date restriction](https://www.w3resource.com/javascript-exercises/javascript-date-exercise-2.php) | Reservation Form | tutorial on how to set date restrictions on the HTML date picker
-| [Neverlost-Thrift](https://github.com/Ri-Dearg/neverlost-thrift/blob/master/config/urls.py) | tests.py | My mentor's repository used as a reference for creating tests & error handler pages
-| [Codepen](https://codepen.io/uidesignhub/pen/vYmBKpj) | Error Handler pages | HTML & CSS template for error handler pages
+
+### Resources:
+
+* Bootstrap.
+
+I used  2  bootstrap template for the project
+[bootstrap](https://github.com/StartBootstrap/startbootstrap-one-page-wonder/blob/master/dist/index.html)
+
+[bootstrap readme](https://github.com/startbootstrap/startbootstrap-one-page-wonder?tab=readme-ov-file#start-bootstrap---one-page-wonder)
+
+other one I have used from code institute walkthrough project for displaying content on home page.
+
+
+* Pictures:
+pictures from Shutterstock and pexels.
+[Pexels](https://www.pexels.com/)
+[shutterstock](https://www.shutterstock.com/images)
+
+* Post Articals:
+
+I have used folloing website for articals that I have posted on my website.
+
+[Education](https://www.education.com/?_gl=1*qrwymn*_up*MQ..*_gs*MQ..*_ga*MTgxNjI3NTk4NC4xNzMyNzEyMDI3*_ga_QRNDCDR42R*MTczMjc3NDYxNS4yLjAuMTczMjc3NDc0My4wLjAuMA..&gclid=Cj0KCQiAo5u6BhDJARIsAAVoDWsLMdhwZDqFTVKurTeRGM8fRLYbUnI9dw7DI0LZPNhabTaN7-kvrLgaAmYOEALw_wcB)
+
+[HSE](https://www2.hse.ie)
+
+[Kids Health](https://kidshealth.org/en/kids/fit-kid.html?ref=search)
+
+[Understood](https://www.understood.org/en)
+
 
 
 ### Media
 
 
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Google Icon](https://fonts.google.com/icons?selected=Material+Symbols+Outlined:sports_tennis:FILL@0;wght@400;GRAD@0;opsz@24&icon.query=tennis) | entire site | image | favicon on all pages
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
-| [Unsplash](https://unsplash.com/photos/BlS47Eiu2iM) | homepage | image | hero image
-| [Unsplash](https://unsplash.com/photos/wvDELsJ_E20) | homepage, news page| image | news article image 1
-| [Unsplash](https://unsplash.com/photos/0wbYOLZwDPY) | homepage, news page| image | news article image 2
-| [Unsplash](https://unsplash.com/photos/2FKTyJqfWX8) | homepage, news page| image | news article image 3
-| [Freepik](https://www.freepik.com/free-photo/young-couple-playing-tennis-court_5507419.htm#from_view=detail_alsolike) | about page | image | 'open to all' image on about page
-| [Unsplash](https://unsplash.com/photos/vRb10tlBHVQ) | about page | image | 'fairly priced' image on about page
-
 The first image for 'Beautiful Facilities' on the about page is my own.
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, Rory Patrick Sheridan for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner Rachel, for believing in me, and allowing me to make this transition into software development, and also actually playing tennis with me while I was making this site to keep me sane.
+
 
 
 
