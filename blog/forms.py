@@ -24,7 +24,7 @@ class PostForm(forms.ModelForm,):
             'slug': "",
                  }
         widgets = {
-            #'content': SummernoteWidget(),
+            'content': SummernoteWidget(),
             }
 
 

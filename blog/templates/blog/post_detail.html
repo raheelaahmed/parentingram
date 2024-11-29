@@ -32,14 +32,9 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-        
-            <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-               
-                <p class="card-text">
+  <div class="row">
+      <div class="col card mb-4  mt-3 left  top">
+          <div class="card-body">
                     {{ post.content | safe }}
                 </p>
                
@@ -123,7 +118,7 @@
     </div>
  <!-- Creating New Comments -->
  <div class="col-md-4 card mb-4 mt-3">
-    <div class="card-body"> 
+    <div class="card-body">
       {% if user.is_authenticated %}
       <h3>Leave a comment:</h3>
       <p>Posting as: {{ user.username }}</p>
