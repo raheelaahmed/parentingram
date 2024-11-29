@@ -11041,3 +11041,39 @@ header.masthead .bg-circle-4 {
   height: 100vh; 
 }
 
+#delete-post{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Center the content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color:#e9ecef;
+}
+
+#signup{
+  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width:1px; 
+  background-color:#e9ecef;
+}
+
+#signin{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width:1px; 
+  background-color:#e9ecef;
+}
+
+.create-form{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width:1px; 
+  background-color:#e9ecef;
+}
+
+.update-form{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-width:1px; 
+  background-color:#e9ecef;
+}

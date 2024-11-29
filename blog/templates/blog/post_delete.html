@@ -3,6 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<div id="delete-post">
 <h1>Confirm Delete</h1>
 <p>Are you sure you want to delete the post "{{ post.title }}"?</p>
 
@@ -14,10 +15,6 @@
     {% csrf_token %}
     <button type="submit" class="delete-post">Delete</button>
 </form>
-
-
-
-
-
+</div>
 
 {% endblock content %}
