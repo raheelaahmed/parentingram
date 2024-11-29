@@ -11031,7 +11031,13 @@ header.masthead .bg-circle-4 {
 /* Error-pages*/
 
 #page-errors{
-  text-align:center;
+  text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Center the content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
 }
 

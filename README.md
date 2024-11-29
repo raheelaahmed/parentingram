@@ -470,12 +470,12 @@ I have used folloing website for articals that I have posted on my website.
 
 [Understood](https://www.understood.org/en)
 
+[heallth](https://www.healthyfood.com/)
 
 
-### Media
 
 
-The first image for 'Beautiful Facilities' on the about page is my own.
+
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor for their support throughout the development of this project.

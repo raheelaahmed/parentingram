@@ -4,11 +4,12 @@
 {% block content %}
 
 
-
 <div id="page-errors">
     <img src="{% static 'images/sorry.jpg' %}">
-    <h2> Sorry, the page you requested not found </h2>
-    <h3>Click <a href="{% url 'home' %}">here</a> to Explore.</h3>
+    <h2>Error 403</h2>
+    <h3> Sorry, the page you requested not found </h3>
+    <p>Click <a href="{% url 'home' %}">here</a> to Explore.<p>
 </div>
+
 
 {% endblock content %}
