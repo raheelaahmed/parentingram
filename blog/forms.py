@@ -5,6 +5,7 @@ from django.forms.widgets import HiddenInput
 from django.utils.text import slugify
 from django_summernote.admin import SummernoteModelAdmin
 from django.contrib.auth.models import User
+from ckeditor.widgets import CKEditorWidget
 
 
 # comment form
@@ -24,9 +25,8 @@ class PostForm(forms.ModelForm,):
             'slug': "",
                  }
         widgets = {
-            'content': SummernoteWidget(),
-            }
-
+           'content': CKEditorWidget(),
+        }
 
 
 

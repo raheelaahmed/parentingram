@@ -15,7 +15,8 @@
             {% endif %}
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{form.media}}
+                {{ form.as_p}}
                <button id="create-post" type="submit">Create Post</button>
                 {% if form.errors %}
                 <p class="error" id="error-message">Please correct the errors below:</p>
@@ -35,9 +36,9 @@
                          
    
     
-                      <script src="{% static 'js/create-post.js' %}"></script>
+                    
                      
 {% endblock content %}
 {% block extras %}
-
+<script src="{% static 'js/create-post.js' %}"></script>
 {% endblock %}

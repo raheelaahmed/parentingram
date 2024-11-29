@@ -192,18 +192,21 @@ class PostUpdateView(UpdateView):
         return reverse('post_detail', kwargs={'slug': self.object.slug})  # Use object.slug
 
 # delete post
-
-
 def delete_post(request, slug):
     post = get_object_or_404(Post, slug=slug)
 
+    # Check if the user is the author or a superuser
     if request.method == 'POST':
-        post.delete()
-        messages.success(request, 'Post deleted successfully!')
-        return redirect('home')
-# Redirect to the home page
+        if post.author == request.user or request.user.is_superuser:
+            post.delete()
+            messages.success(request, 'Post deleted successfully!')
+            return redirect('home')  # Redirect to the home page
+        else:
+            messages.error(request, 'You are not authorized to delete this post.')
+            return redirect('home')
     else:
-        return render(request, 'blog/post_delete.html', {'post': post})
+        # Display confirmation page
+        return render(request, 'blog/post_delete.html', {'post': post})        
 
 
 # search view
