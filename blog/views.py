@@ -150,18 +150,31 @@ def get_absolute_url(slug):
 
 # update post
 
-class postUpdateView(UpdateView):
+class PostUpdateView(UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/update_post.html'
 
+    def form_valid(self, form):
+        """
+        Updates the post only if the current user is the author.
+        """
+        post = form.save(commit=False)  # Don't save immediately
 
+        if post.author == self.request.user:
+            post.save()
+            messages.success(self.request, 'Post Updated!')
+            return redirect('post_detail', slug=post.slug)  # Redirect with slug
+        else:
+            messages.error(self.request, 'You are not authorized to update this post.')
+            return self.render_to_response(self.get_context_data(form=form))  # Re-render form
 
-    def get_success_url(self): 
-
-        messages.success(self.request, "  your Post updated successfully!")
-        
-        return reverse('post_detail', kwargs={'slug': self.object.slug})
+    def get_success_url(self):
+        """
+        Returns the success URL after a successful update.
+        """
+        messages.success(self.request, "Your Post updated successfully!")
+        return reverse('post_detail', kwargs={'slug': self.object.slug})  # Use object.slug
 
 # delete post
 

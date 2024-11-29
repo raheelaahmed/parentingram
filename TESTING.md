@@ -25,10 +25,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Home|![Home](static/documents/screenshots/home-html.png)|pass(No Errors)|
 | About|![About](static/documents/screenshots/about-html.png) |Pass (No Errors)|
 | Search|![Search](static/documents/screenshots/search-html.png) | Pass(No Errors) |
-| Login|![Login](static/documents/login-html.png) |Pass(No Errors)|
+| Login|![Login](static/documents/screenshots/login-html.png) |Pass(No Errors)|
 |Logout|![Logout](static/documents/screenshots/logout-html.png)|Pass(No Errors)|
 |Register|  --- | --- |
-| Create-post|  --- | --- |
+|Create-post|  --- | --- |
 |Update-Post|  --- | --- |
 |Delete-Post|  --- | --- |
 |Post-Detail|  --- | --- |
@@ -159,13 +159,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | Register | | | | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
-
-| Log In | | | |  |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
+| Login | | | | |
+| | Enter valid password| Field will only accept password format | Pass| |
+| | Click Login button|  Redirects user to home page | Pass| |
+| Logout | | | | |
 | | Click Logout button | Logs out user, Redirects user to logout page | Pass |
-
 
 
 

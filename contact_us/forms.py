@@ -8,5 +8,5 @@ class ContactForm(ModelForm):
         model = Contact
         fields = ['email', 'subject', 'message']
         widgets = {
-            'message': SummernoteWidget(),
+            #'message': SummernoteWidget(),
         }
