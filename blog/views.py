@@ -12,6 +12,21 @@ from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
+
+
+# Profile Views
+def profile(request):
+    if request.user.is_authenticated:
+        # Filter posts for the currently logged-in user
+        queryset = Post.objects.filter(author=request.user)
+    else:
+        # Handle case where user is not logged in (optional)
+        queryset = None  # or redirect to login page
+
+    template_name = "blog/profile.html"
+    context = {"posts": queryset}  # Add queryset to context for template
+    return render(request, template_name, context)
+   
 # Home Views
 class PostList(generic.ListView):
     queryset = Post.objects.filter(status=1)

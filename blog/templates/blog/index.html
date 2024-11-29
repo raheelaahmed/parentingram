@@ -27,7 +27,7 @@
                                   alt="placeholder image">
                                 {% else %}
                                 <a href="{% url 'post_detail' post.slug %}" class="post-link"><img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                  alt="{{ post.title }}" style ="width:300px;height:300px;"></a>
+                                  alt="{{ post.title }}"></a>
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
