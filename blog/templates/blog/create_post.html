@@ -13,7 +13,7 @@
             {% if form.is_valid %}
             <p class="create-success">Congratulations, your Post created successfully! You can see it <a href="{% url 'home' %}">Here</a>.</p>
             {% endif %}
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" class="post">
                 {% csrf_token %}
                 {{form.media}}
                 {{ form.as_p}}
