@@ -8179,6 +8179,7 @@ textarea.form-control-lg {
   left:0;
   bottom: 0;
   width: 100%;
+  margin-top:150px;
 }
 
 .bg-white {
@@ -11149,20 +11150,17 @@ header.masthead .bg-circle-4 {
 
 /* Style the submit button */
 .post button[type="submit"] {
-  background-color: #3498db; /* Blue button */
-  color: white;
-  font-size: 16px;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
+  display: inline-block;            
+  padding: 12px 30px;              
+  background-color: #3498db;       
+  color: white;                    
+  font-size: 16px;                   
+  font-weight: bold;                
+  border-radius: 50px;              
+  text-align: center; 
 }
 
-/* Hover effect for the submit button */
-.post button[type="submit"]:hover {
-  background-color: #2980b9;
-}
+
 
 /* Add some responsive design for smaller screens */
 @media (max-width: 600px) {
@@ -11210,3 +11208,61 @@ header.masthead .bg-circle-4 {
   }
 }
 
+
+.profile {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ .profile h1{
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+ }
+
+
+ h1 {
+  font-size: 36px;          
+  font-weight: bold;        
+  color: #333;              
+  margin-bottom: 20px;      
+  text-align: center;       
+  font-family: 'Arial', sans-serif; 
+}
+/* logout form*/
+.logout button{
+  display: inline-block;            
+  padding: 12px 30px;              
+  background-color: #3498db;       
+  color: white;                    
+  font-size: 16px;                   
+  font-weight: bold;                
+                    
+  border-radius: 50px;              
+  text-align: center;              
+  }
+
+  /* reset password*/
+
+  .password {
+    display: flex;                 /* Use flexbox for centering */
+    flex-direction: column;        /* Arrange items vertically */
+    justify-content: center;       /* Center vertically */
+    align-items: center;           /* Center horizontally */
+    height: 100%;                  /* Take full height of the viewport */
+    text-align: center;            /* Center text inside */
+    padding: 20px;  
+    background-color: #e9ecef;              /* Some padding for spacing */
+}
+/* change password */
+
+.password-change p{
+  text-align: center;  /* Centers text inside the <p> */
+  margin-left: auto;   /* Automatically adjusts left margin */
+  margin-right: auto;  /* Automatically adjusts right margin */
+  width: fit-content; 
+}
+  
