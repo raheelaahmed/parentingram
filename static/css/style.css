@@ -11077,3 +11077,17 @@ header.masthead .bg-circle-4 {
   border-width:1px; 
   background-color:#e9ecef;
 }
+ /* image resizing */
+
+ .image-flash {
+  max-width: 100%;          /* Ensures the image doesn't exceed the container width */
+  height: auto;             /* Maintains the aspect ratio */
+  display: block;           /* Ensures no extra space below the image */
+  border-radius: 8px;      /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
+  transition: transform 0.2s; /* Optional: Smooth transition for hover effects */
+}
+
+.image-flash:hover {
+  transform: scale(1.05);   /* Optional: Slightly enlarge the image on hover */
+}

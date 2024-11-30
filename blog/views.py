@@ -9,6 +9,7 @@ from .forms import CommentForm
 from .forms import PostForm
 from django.views.generic import View
 from django.contrib.auth.decorators import login_required
+from cloudinary.uploader import upload as cloudinary_upload
 
 
 # Create your views here.
