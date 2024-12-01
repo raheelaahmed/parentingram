@@ -274,7 +274,7 @@ on the admin pannel
 This website. can be improved by adding more features like.
 
 * User can share the posts.
-* profile page is very basic ,it only have user's post, it can have more features like tumbnail, users personal informmation.
+* profile page is very basic ,it only have user's post, it can have more features like tumbnail, users personal information.
 * user can update his profile.
 * Chat feature for parrent.
 
@@ -345,6 +345,13 @@ main pages are Home page (index.html), post detail page(post_detail.html), templ
 * contact_us app has contact-form in form.py as app send mesaages using front end form.
 * contact_us app has 1 main template that a form to send messages.
 * contact_us app has url in urls.py file.
+
+
+## Agile methodologies:
+
+Following Agile methodology, I issued user stories and added them to my project.
+
+[project](https://github.com/users/raheelaahmed/projects/4).
 
 
 ## Testing
@@ -514,6 +521,17 @@ I have used folloing website for articals that I have posted on my website.
 [Understood](https://www.understood.org/en)
 
 [heallth](https://www.healthyfood.com/)
+
+
+
+
+### Learning Resources:
+
+* [codemy.com](https://www.youtube.com/@Codemycom).
+* [W3 Scools](https://www.w3schools.com/django/index.php)
+* [Django docs](https://docs.djangoproject.com/en/5.1/)
+* [stackflow](https://stackoverflow.com/)
+
 
 
 
