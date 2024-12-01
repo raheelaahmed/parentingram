@@ -204,6 +204,7 @@ I have added added 4 error pages in all of the apps:
 
 ![error](static/documents/screenshots/error1.png)
 
+
 ## Bugs and Fixes:
 
 
@@ -286,6 +287,9 @@ solutions:
 * There are few bug in Django formm and sumernote that are seen in html validation. I was unable to clear them.
 
 * There are Two errors in the terminal that i am unable to fix they are from gitpod."ms-toolsai.vscode-jupyter-slideshow extension is not synced, but not added in .gitpod.yml".
+
+
+![Bugs](static/documents/screenshots/unfixed-bugs.png)
 
 
 
