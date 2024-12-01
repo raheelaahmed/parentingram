@@ -159,24 +159,17 @@ Defensive programming was manually tested with the below user acceptance testing
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
 | Nav links | | | | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
-| | Click on About link in navbar | Redirection to About page | Pass | |
-| | Click on Register link in navbar | Redirection to Register page | Pass | |
-| | Click on Login link in navbar | Redirection to Login page | Pass | |
-| | Click on post Image | Redirection to that post details page | Pass | |
-| | Click on Pagination next double arrow | Redirection to next pagination page | Pass | |
-| | Click on Pagination previus double arrow | Redirection to previous pagination page | Pass | |
-| | Click on Search button in navbar |redirects to search page |Pass | |
-| | click on Create link in navbar is only visible when user is loggedin| open Create post page|  Pass|  |
-| | click on Profile link in navbar is only visible when user is loggedin| open Profile page|  Pass|  |
-| Register | | | | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| Login | | | | |
-| | Enter valid password| Field will only accept password format | Pass| |
-| | Click Login button|  Redirects user to home page | Pass| |
-| Logout | | | | |
-| | Click Logout button | Logs out user, Redirects user to logout page | Pass |
+|Home| Click on Home link in navbar | Redirection to Home page | Pass | |
+|About| Click on About link in navbar | Redirection to About page | Pass | |
+|Register| Click on Register link in navbar | Redirection to Register page | Pass | |
+|Sign-in| Click on Login link in navbar | Redirection to sign-in page | Pass | |
+|Feature image | Click on post Image | Redirection to that post details page | Pass | |
+|Next| Click on Pagination next double arrow | Redirection to next pagination page | Pass | |
+|Previous | Click on Pagination previus double arrow | Redirection to previous pagination page | Pass | |
+|Search | Click on Search button in navbar |redirects to search page |Pass | |
+|Create| click on Create link in navbar is only visible when user is loggedin| open Create post page|  Pass|  |
+|Profile| click on Profile link in navbar is only visible when user is loggedin| open Profile page|  Pass|  |
+
 
 
 
