@@ -8179,7 +8179,7 @@ textarea.form-control-lg {
   left:0;
   bottom: 0;
   width: 100%;
-  margin-top:150px;
+  margin-top:220px;
 }
 
 .bg-white {
@@ -11036,15 +11036,12 @@ header.masthead .bg-circle-4 {
 
 /* Error-pages*/
 
-#page-errors{
-  text-align: center;
+#page-errors {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* Center the content vertically */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; 
+  text-align: center;  
+  margin-left: auto;   
+  margin-right: auto;  
+  
 }
 
 #delete-post{
@@ -11287,7 +11284,7 @@ header.masthead .bg-circle-4 {
   text-align: center;  
   margin-left: auto;   
   margin-right: auto;  
-  width: fit-content;
+  
 }
 
 .contact{

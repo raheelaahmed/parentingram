@@ -156,7 +156,7 @@ once user click editpost button a new page is displayed with an update form on i
 - **Contact Page**
 
 
-    - Contact Page. In the footer there is a link contact us, a new page will be opened on clicking contact us. it has a form and you can send direct messages to admin.
+    - Contact Page. In the footer there is a link contact us, a new page will be opened on clicking contact us. it has a form and you can send direct messages to admin.Admin can see the messages in contact app in admin pannel adn recieve an email aswell.
 
 ![contact-us](static/documents/screenshots/contact-us.png)
 
