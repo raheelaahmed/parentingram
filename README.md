@@ -5,15 +5,18 @@
 
 # Parentingram 
 
-![home-page](static/documents/screenshots/Home-page.png)
+![home-page](static/documents/screenshots/Home.png)
 
 
-As the name suggests, Parentingram is a community platform designed for parents. It's a place where parents can come together to share ideas, tips, and experiences related to parenting. You can find a variety of content, including healthy recipes, lunch ideas, educational posts, activity sheets, and information about local events and sports.
-The platform also allows you to engage with other parents by commenting on posts and expressing your likes or dislikes.
+As the name suggests, Parentingram is a community platform designed for parents. It’s a place where parents can come together to share ideas, tips, and experiences related to parenting. You can find a variety of content, including healthy recipes, lunch ideas, educational posts, activity sheets, and information about local events and sports.
+The platform also allows you to engage with other parents by commenting on posts and expressing your likes and dislikes.
 
 ## UX
 
-The design philosophy was to create a simple blog where user can see post and share posts and share their comment on other posts. 
+The design philosophy was to create a simple blog where users can view posts and comment on other posts. A user can view a post, open it, and read its content. A user can create their own post if they are logged in, and they can also update or delete their own posts.
+Users can comment on other posts if they are logged in, and they can update or delete their own comments as well.
+Once a user comments on a post, a message will appear indicating that the comment is awaiting approval. Other users can only see the comment. Once an admin approves the comment, everyone can view it.
+A user can like or dislike a post as well, once they are logged in.
 
 ### Colour Scheme
 
@@ -89,14 +92,26 @@ now you can see Logout, you can logout using this feature.
 
 This is very important feature of website, you can create your own post using this button. it only appears if you are loggedin on the website.
 
+* Profile:
+
+This is the user profile page, user can see all his posts on this page.
+
 ### Site Pages
 
 - **Homepage**
 
     - The main homepage for the site. All the posts are displayed on the this page, you can scroll up and down to see post, using next button you can go on next page to see more posts.
-    post images are displayed, user can open the post by clicking on the image.
+    post images are displayed, user can open the post by clicking on the image. In the Head part of the oage there is a Explore button with Tag line "Explore".
+    It is linked with home page.
+    parentingram logo is linked to home page as well.
 
-![Home](static/documents/screenshots/home.png)
+
+![Home](static/documents/screenshots/Home.png)
+
+![Tag-line](static/documents/screenshots/tag-line.png)
+
+![Logo](static/documents/screenshots/Logo.png)
+
 
 - **About Page**
 
@@ -108,7 +123,7 @@ This is very important feature of website, you can create your own post using th
 
     - User can create a post using create post form, Post have 4 Fields(Image, Title, Author and content ). it is important to include first 3 fields other wise form will not work. User can publish the post on page after slecting published from  status list. your post will be posted on home page on clicking create Post button. you will recieve a success message with a link to view the post on home page.
 
-  ![create-post](static/documents/create-post.png)  
+  ![create-post](static/documents/screenshots/create.png)  
 
 
 
@@ -121,11 +136,7 @@ if user is logged in then he can like or dislike the post and can make a comment
 If user is not logged in, he can see the post and deils but can not like, dislike and comment.
 
 
-
-![post-detail1](static/documents/post-deatil1.png)
-
-
-![post-detail2](static/documents/screenshots/post-deatil2.png)
+![post-detail](static/documents/screenshots/postdetail.png)
 
 
 
@@ -135,7 +146,7 @@ If user is the author of the post then he can edit the post on clicking edit but
 once user click editpost button a new page is displayed with an update form on it ,user can make necessary changes and click on update button post will be updated and post detail will be opeded where user can see his updated post and a success message that you post ahve been updated.
 
 
-![update-post](static/documents/update-post.png)
+![update-post](static/documents/screenshots/update.png)
 
 
 
@@ -153,29 +164,73 @@ once user click editpost button a new page is displayed with an update form on i
 
     - Register Page. Displays a form that new users of the site can fill in and make an account. The form is short, simple, and clean to encourage users to use it.
 
-![Register](static/documents/screenshots/register.png)
+![Register](static/documents/screenshots/signup.png)
 
 - **Login Page**
 
     - Login Page. Displays a login form that existing users can use to log in to the site. Two simple input fields for username and password make it easy for users to log in to their account. A sign up button at the bottom of the page lets users who do not yet have an account easily find the register page
 
-![log-in](static/documents/screenshots/signin.png)
+![log-in](static/documents/screenshots/sign-in.png)
 
 
+- **Profile Page**
 
+This page is user profile page, User can see all his posts on this page.
+
+![Profile](static/documents/screenshots/profile.png)
 
 
 - **Logout Page**
 
     - Logout Page. A simple page confirming that the user has logged out of their account. 
 
-![log-out](static/documents/screenshots/signout.png)
+![log-out](static/documents/screenshots/sign-out.png)
+
+
+
+## Social media:
+ In the footer you can see all the social media links, that open in a new window. Contact-Us is on the page Footer as well.
+
+![Footer](static/documents/screenshots/Footer.png)
+
 
 
 
 - **Custom Error Pages**
 
     - Custom error handler pages. These pages display when a user encounters one of the following common errors: 400, 403, 404, 500. These provide a more user-friendly error page than the user would see otherwise and includes an informative message and button to return home to the site. 
+
+
+![error](static/documents/screenshots/Error.png)
+
+
+- **Password Reset**
+
+If user forgets password, he can reset password form sign in page by following these steps.
+
+* Click Forget password? button on sign in page.
+* Enter his/her Email address.
+* Check Email.
+* Open the link provided to reset the password.
+* Enter yout new password twice.
+* You will see a success message that you password has changed.
+
+![reset-password](static/documents/screenshots/reset0.png)
+
+
+![reset-password1](static/documents/screenshots/change-password-1.png)
+
+
+
+![reset-password2](static/documents/screenshots/change-pasword3.png)
+
+
+![reset-password3](static/documents/screenshots/change-password-3.png)
+
+
+![reset-password4](static/documents/screenshots/change-password-4.png)
+
+
 
 
 ### User Features
@@ -215,17 +270,6 @@ on the admin pannel
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Tools & Technologies Used
 
 
@@ -241,12 +285,13 @@ on the admin pannel
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Pillow](https://pypi.org/project/Pillow/) used for image processing
 - [Gunicorn](https://gunicorn.org/) used for WSGI server
-- [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter
+- [sycopg2](https://pypi.org/project/psycopg2/) used as a PostgreSQL database adapter.
+- [Summernote](https://summernote.org/) useded as text editor for admin.
+- [Ckeditor](https://ckeditor.com/) used as text editor at front-end.
 
 ## Database Design
 
@@ -266,8 +311,8 @@ I have craeted a project named as Parentingram. It has 3 apps
 ### blog:
 
 * blog app has 2 models in model.py Post and Comment.
-* blog app has 6 main html pages in templates and error pages.
-main pages are Home page (index.html), post detail page(post_detail.html), template for creating posts(create_post), (post_delete.html) and (update_post.html) for deleting and updating post. finally it has page for search feature(search_post) all the search result are dispalyed on this page.
+* blog app has 7 main html pages in templates and error pages.
+main pages are Home page (index.html), post detail page(post_detail.html), template for creating posts(create_post), (post_delete.html) and (update_post.html) for deleting and updating post. finally it has page for search feature(search_post) all the search result are dispalyed on this page and profile page.
 * blog app has views for all the templates in views.py file.
 * blog app has all the url for views in urls.py.
 * blog app has form.py which has all the form used for createing and updating posts it has comment form as well.
@@ -309,19 +354,21 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-The live deployed application can be found deployed on [Heroku](https://parentigram-0cf4fc00ca66.herokuapp.com).
+The live deployed application can be found deployed on Heroku. You can find it [here](https://parentigram-0cf4fc00ca66.herokuapp.com).
 
-### ElephantSQL Database
+### PostgreSQL Database
 
-This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+This project uses [PostgreSQL](https://www.postgresql.org) for the PostgreSQL Database.
 
-To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
-- Click **Create New Instance** to start a new database.
-- Provide a name (this is commonly the name of the project: bushy-park-tennis-club-ld).
-- Select the **Tiny Turtle (Free)** plan.
-- You can leave the **Tags** blank.
-- Select the **Region** and **Data Center** closest to you.
-- Once created, click on the new database name, where you can view the database URL and Password.
+To obtain your own Postgres Database.
+
+
+1. Open the link provided by Code Institute: [PostgreSQL](https://dbs.ci-dbs.net/).
+2. Enter the email address connected to Code Institute.
+3. You will receive your database information in your email.
+4. Copy the code and add it to your `env.py` file.
+5. You can add the database information to your `settings.py` file.
+6. Create a superuser and use the database.
 
 ### Cloudinary API
 

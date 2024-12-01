@@ -4,13 +4,13 @@
 {% block content %}
 
     <h1 class="card-title">Contact Us</h1>
-    <div class="contact-form">
+    <div>
      {% if success_message %}
     <div class="alert alert-success">
     {{ success_message }}
     </div>
     {% endif %}
-   <form   method="post" class="post">
+   <form   method="post" class="post contact">
        {% csrf_token %}
        {{ form.as_p }}
    <button id="submit-form" type="submit">Submit</button>

@@ -462,10 +462,10 @@ legend + * {
   padding: 0;
 }
 
-/*::file-selector-button {
+::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
-}*/
+}
 
 output {
   display: inline-block;
@@ -8179,7 +8179,7 @@ textarea.form-control-lg {
   left:0;
   bottom: 0;
   width: 100%;
-  margin-top:200px;
+  margin-top:150px;
 }
 
 .bg-white {
@@ -10963,6 +10963,19 @@ header.masthead .bg-circle-4 {
   margin-bottom: 20px;
  }
 
+ .delete-post{
+  margin-bottom: 60px;
+ }
+
+
+
+
+
+
+ #button-signout{
+  margin-bottom: 150px;
+ }
+
  .error{
   color:red;
  }
@@ -11035,18 +11048,15 @@ header.masthead .bg-circle-4 {
 }
 
 #delete-post{
-  text-align: center;  
+  text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #e9ecef;  
-  padding: 20px;               
-  margin: 0 auto;             
-  width: 80%;                
-}
-
-
-#delete-post p {
-  width: fit-content;         
-  margin: 0 auto;              
+  /* Center the content vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color:#e9ecef;
 }
 
 #signup{
@@ -11076,12 +11086,12 @@ header.masthead .bg-circle-4 {
  /* image resizing */
 
  .image-flash {
-  max-width: 100%;          
-  height: auto;             
-  display: block;           
-  border-radius: 8px;      
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  transition: transform 0.2s; 
+  max-width: 100%;          /* Ensures the image doesn't exceed the container width */
+  height: auto;             /* Maintains the aspect ratio */
+  display: block;           /* Ensures no extra space below the image */
+  border-radius: 8px;      /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
+  transition: transform 0.2s; /* Optional: Smooth transition for hover effects */
 }
 
 /* forms */
@@ -11089,13 +11099,12 @@ header.masthead .bg-circle-4 {
 /* Style the form container */
 .post {
   width: 100%;
-  max-width: 600px; 
-  margin: 0 auto; 
+  max-width: 600px; /* Limit the max width */
+  margin: 0 auto; /* Center the form on the page */
   padding: 20px;
-  background-color: #f9f9f9; 
-  border-radius: 8px; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   font-family: Arial, sans-serif;
 }
 
@@ -11135,8 +11144,8 @@ header.masthead .bg-circle-4 {
 .post input[type="email"]:focus,
 .post input[type="password"]:focus,
 .post textarea:focus {
-  border-color: #3498db; 
-  outline: none; /
+  border-color: #3498db; /* Blue border when focused */
+  outline: none; /* Remove default outline */
 }
 
 /* Style the submit button */
@@ -11177,16 +11186,16 @@ header.masthead .bg-circle-4 {
 /* search div*/
 .search {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  background-color: #f4f4f4; 
+  justify-content: center; /* Center the search bar horizontally */
+  align-items: center; /* Center items vertically */
+  background-color: #f4f4f4; /* Light background color */
   padding: 10px;
-  border-radius: 8px; 
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; /* Optional rounded corners for the search bar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   width: 100%;
-  max-width: 500px; 
-  margin: 0 auto; 
-
+  max-width: 500px; /* Max width for the search bar */
+  margin: 0 auto; /* Center the search bar on the page */
+  margin-bottom: 200px; /* Add 200px of space below the search */
 }
 
 
@@ -11194,7 +11203,7 @@ header.masthead .bg-circle-4 {
 
 @media (max-width: 600px) {
   .search {
-      flex-direction: column; 
+      flex-direction: column; /* Stack input and button vertically */
       padding: 15px;
   }
 }
@@ -11231,6 +11240,7 @@ header.masthead .bg-circle-4 {
   color: white;                    
   font-size: 16px;                   
   font-weight: bold;                
+                    
   border-radius: 50px;              
   text-align: center;              
   }
@@ -11238,15 +11248,15 @@ header.masthead .bg-circle-4 {
   /* reset password*/
 
   .password {
-    display: flex;                 
-    flex-direction: column;        
-    justify-content: center;       
-    align-items: center;           
-    height: 100%;                  
-    text-align: center;            
+    display: flex;                 /* Use flexbox for centering */
+    flex-direction: column;        /* Arrange items vertically */
+    justify-content: center;       /* Center vertically */
+    align-items: center;           /* Center horizontally */
+    height: 100%;                  /* Take full height of the viewport */
+    text-align: center;            /* Center text inside */
     padding: 20px;  
-    background-color: #e9ecef; 
-  }             
+    background-color: #e9ecef;              /* Some padding for spacing */
+}
 /* change password */
 
 .password-change p{
@@ -11255,4 +11265,31 @@ header.masthead .bg-circle-4 {
   margin-right: auto;  
   width: fit-content; 
 }
+.explore{
+  background-color: #ee0979; 
+  border: none; 
+  color: white; 
+  padding: 15px 30px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
   
+/* Error-pages*/
+
+#page-errors {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;  
+  margin-left: auto;   
+  margin-right: auto;  
+  width: fit-content;
+}
+
+.contact{
+  text-align: center;
+}

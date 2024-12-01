@@ -1,14 +1,3 @@
-# Testing:
-
-
-## HTML Validation:
-
-
-
-
-
-
-
 # Testing
 
 Return back to the [README.md](README.md) file.
@@ -27,12 +16,20 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Search|![Search](static/documents/screenshots/search-html.png) | Pass(No Errors) |
 | Login|![Login](static/documents/screenshots/login-html.png) |Pass(No Errors)|
 |Logout|![Logout](static/documents/screenshots/logout-html.png)|Pass(No Errors)|
-|Register|  --- | --- |
-|Create-post|  --- | --- |
-|Update-Post|  --- | --- |
-|Delete-Post|  --- | --- |
-|Post-Detail|  --- | --- |
-|Contact-us|  --- | --- |
+|Register|![Register](static/documents/screenshots/rigister-html.png) | Errors form Django Form(not visible in template ) |
+|Create-post|![Create](static/documents/screenshots/create-html.png )| Errors form Django Form(not visible in template, its caused by editor) |
+|Create-post|![Create](static/documents/screenshots/createpost-html.png) |Pass(No Error after uninstalling Editors)|
+|Update-Post|![Update](static/documents/screenshots/update-post-html.png) |Pass(No Errors)|
+|Update-Post|![Update](static/documents/screenshots/update 2-html.png )|Errors form Django Form(not visible in template, its caused by editor)|
+|Delete-Post|![Delete](static/documents/screenshots/delete-html.png)|Pass(No Errors)| 
+|Post-Detail|![Post-detail](static/documents/screenshots/post-setail-html.png) |Errors(Not visible in templete) |
+|Contact-us|![Contact-us](static/documents/screenshots/contact-html.png)|Pass(No Errors)|
+|Profile|![Profile](static/documents/screenshots/profile-html.png) |Pass(No Errors)|
+|Password-reset 1|![Password-reset-1](static/documents/screenshots/password-1-html.png)|Pass(No Errors)|
+|Password-reset 2|![Password-reset-2](static/documents/screenshots/password-2-html.png)|Pass(No Errors)|
+|Password-reset 3|![Password-reset-3](static/documents/screenshots/password-3-html.png) |Pass(No Errors)|
+|Password-reset 4|![Password-reset-4](static/documents/screenshots/password-final-html.png) |Pass(No Errors)|
+
 
 
 
@@ -42,10 +39,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | File | Screenshot | Notes |
-
 | --- | --- | --- | 
-
-|Parentingram|![css-validation](static/documents/Css-Validation.png) |Pass(No Errors)|
+|Parentingram|![css-validation](static/documents/screenshots/Css-Validation.png) |Pass(No Errors)|
 
 
 ### JavaScript
@@ -54,9 +49,10 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-
 | comments.js | ![comments.js](static/documents/screenshots/comments.png) | Pass: No Errors |
 | create-post.js | ![screenshot](static/documents/screenshots/create-js.png) | Pass: No Errors |
+| sign-up.js | ![screenshot](static/documents/screenshots/signuu-js.png) | Pass: No Errors |
+
 
 
 ### Python
@@ -107,8 +103,8 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 I've tested my deployed project on  browsers to check for compatibility issues.
 
-* It was working fine on safari.
-* it was working fine on chorome.
+* It was working fine on safari.((home page is little slow to load))
+* it was working fine on chorome.(home page is little slow to load)
 
 
 ## Responsiveness
@@ -116,28 +112,44 @@ I've tested my deployed project on  browsers to check for compatibility issues.
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
 
-![responsive](static/documents/screenshots/responsive.png)
+![responsive](static/documents/screenshots/responsiveness.png)
+
+
+I have cheked responsivness on various screen, here are the results for Desktop, Tablet and Mobile Phone.
+
+|Screen|Result|
+|---|---|
+|Desktop|![desktop](static/documents/screenshots/desktop.png)|
+|Tablet|![Tablet](static/documents/screenshots/ipad.png)|
+|Mobile phone|![Mobile](static/documents/screenshots/mobile.png)|
+
 
 
 ## Lighthouse Testing:
 
-### Website App Templates - Desktop Testing
+### Website App Templates -Testing
 | Page |Screenshot | ---|
 | --- | --- | --- |
-| Home |  ![Home](static/documents/screenshots/lighthouse.png) | 
+| Home |  ![Home](static/documents/screenshots/lighthouse-home1.png) | 
 | About |  ![About](static/documents/screenshots/lighthouse-about.png) | 
 | Contact-us |  ![contact-us](static/documents/screenshots/lighthouse-contactus.png) | 
 | Create-post | ![create-post](static/documents/screenshots/lighthouse-create.png) | 
-| Update-post |  ![Update-post](static/documents/screenshots/lighthouse-updatepost.png) | 
+| Update-post |  ![Update-post](static/documents/screenshots/lighthouse-update.png) | 
 | Post-Detail | ![Post-detail](static/documents/screenshots/lighthouse-postdetail.png) | 
-| Delete-post | ![Delete-post](static/documents/screenshots/lighthouse-deletepost.png) |
-| Seach-post | ![Serach-post](static/documents/screenshots/lightouse-search.png) | 
+| Delete-post | ![Delete-post](static/documents/screenshots/lighthouse-delete.png) |
+| Seach-post | ![Serach-post](static/documents/screenshots/lighthouse-search.png) | 
 | Login | ![Login](static/documents/screenshots/lighthouse-signin.png) |
-| Logout |  ![Logout](static/documents/screenshots/lighthouse-logout.png) | 
+| Logout |  ![Logout](static/documents/screenshots/lightlouse-logout.png) | 
 | Register  |  ![Register](static/documents/screenshots/lighthouse-register.png) | 
-| Custom Error page| ![Error-page] | No warnings |
+| Profile| ![Profile](static/documents/screenshots/lighthouse-profile.png)|
+| Password-1| ![Password-1](static/documents/screenshots/lighthouse-password-1.png)|
+| Password-2| ![Password-2](static/documents/screenshots/lighthouse-password-2.png)|
+| Password-3| ![Password-3](static/documents/screenshots/lighthouse-password-3.png)|
+| Password-4| ![Password-4](static/documents/screenshots/lighthouse-password-4.png)|
 
+#### Note:
 
+("I have warnings in Lighthouse due to two Bootstrap CSS files. I use Summernote for the admin panel and CKEditor for creating and updating posts on the front-end. I could not Fixed it due to shortage of time.")
 
 
 ## Defensive Programming
@@ -155,7 +167,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Pagination next double arrow | Redirection to next pagination page | Pass | |
 | | Click on Pagination previus double arrow | Redirection to previous pagination page | Pass | |
 | | Click on Search button in navbar |redirects to search page |Pass | |
-| | click on Create link in navBar is only visible when user is loggedin| open Create post page|  Pass|  |
+| | click on Create link in navbar is only visible when user is loggedin| open Create post page|  Pass|  |
+| | click on Profile link in navbar is only visible when user is loggedin| open Profile page|  Pass|  |
 | Register | | | | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
@@ -167,96 +180,114 @@ Defensive programming was manually tested with the below user acceptance testing
 
 
 
-## User Story Testing
-
-| User Story | Screenshot |
-| --- | --- |
-
-
-
-
-
-
-
-
-
+## Submit Form Validation:
+ |Form name|Pass/Fail|
+ |----|-----|
+ |Register:| Pass|
+ |Sign In:| Pass|
+ |Forgot Password:| Pass|
+ |password Reset:| Pass|
+ |Create post:| Pass|
+ |Update post:| Pass|
+ |Contact Us:| Pass|
+ |Delete Post:| Pass|
 
 
+ ## Custom Error Pages:
+
+I have added added 4 error pages in all of the apps:
+
+* 403 Error
+* 404 Error
+* 405 Error
+* 500 Error
+
+![error](static/documents/screenshots/error1.png)
+
+## Bugs and Fixes:
 
 
-## Bugs
-
-
--   homepge  page was not opening.
+-  Home page:  
+homepge  page was not opening.
 
    
+- Sulution:
+     To fix this, i logged in in admin pannel and deleted the last post(with out slug), and then it started working.
 
-    - To fix this, i logged in in admin pannel and deleted the last post(with out slug), and then it started working.
-
-- Author:
+-  Author:
 
     
-     - I have an author field on my create post page which have foriegn key and was display all the user names as option.
+Bug:
+   I have an author field on my create post page which have foriegn key and was display all the user names as option.
 
-
-
-          - To fix it, I removed author field form form and added it in create post view.
+Solution:
+    To fix it, I removed author field form form and added it in create post view.
 
 
 
  - Slug-field: 
 
-       - I have slug field in my create post form, but users were unaware of slug term.
+ Bug: 
+    I have slug field in my create post form, but users were unaware of slug term.
 
-
-           - I hide slug field using form label to empty string and used java script to target input field, then I added in the model to slugify title of the post and add it in the form.
+ solution:
+    I hide slug field using form label to empty string and used java script to target input field, then I added in the model to slugify title of the post and add it in the form.
 
 
 
 - Search:
 
 
-     -  I had error 404 for search page.
+ Bug:
+  I had error 404 for search page.
 
 
-          - I fixed it by bring the url on 2nd line of url path.
+ solution:
+        I fixed it by changing the order of url paths
 
 
 
 - Error 404:
 
+Bug:
+  There was an error opening the post detail.
 
-       - There was an error opening the post detail.
-
-
-       ![post](static/documents/screenshots/error 404.png)
-
-
-       - I fixed it by fixing the url postion.
+solutioon: 
+    I fixed it by fixing the url postion.
 
 
 
  - Data base error:
 
-    - There was an error i was unable to access my website.
+Bug:
+  There was an error i was unable to access my website.
 
 
-    ![programming](static/documents/screenshots/programing error.png)  
+    ![programming](static/documents/screenshots/programing-error.png)  
 
 
-    - I was able to fix it with the help of tutor support, who advised me to delete all migrations and then use a new data base.
+ solution:
+    I was able to fix it with the help of tutor support, who advised me to delete all migrations and then use a new data base.
+
+
+-  Footer:
+
+Bug:
+  on some pages Footer was float at top, i tried position(stickey,fixed,absolute,static). But they all were not working same on all pages.
+
+solutions:
+    I fixed footer by adding margin-top in css.
 
 
 
 
-
-
-
-
-    
 ## Unfixed Bugs
 
-There are few bug in Django formm and sumernote that are seen in html validation. I was unable to clear them.
+* There are few bug in Django formm and sumernote that are seen in html validation. I was unable to clear them.
+
+* There are Two errors in the terminal that i am unable to fix they are from gitpod."ms-toolsai.vscode-jupyter-slideshow extension is not synced, but not added in .gitpod.yml".
+
+
 
 
 
