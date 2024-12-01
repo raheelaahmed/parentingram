@@ -186,6 +186,27 @@ Defensive programming was manually tested with the below user acceptance testing
  |Delete Post:| Pass|
 
 
+## Success and Alert messages:
+ 
+ User recieve success Messages on.
+
+ * Sign in
+ * sign out
+ * craeting a Post.
+ * Updating a post.
+ * deleting a post.
+ * writing comment.
+ * updating comment.
+ * deleting comment.
+
+
+ User recieve alert messages on.
+
+ * form validations
+ * if user is trying to delete or edit other userr;s post.
+
+
+
  ## Custom Error Pages:
 
 I have added added 4 error pages in all of the apps:

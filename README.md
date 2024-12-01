@@ -269,6 +269,16 @@ on the admin pannel
 * Admin can update and delete all post using admin pannel.
 
 
+### More Features:
+
+This website. can be improved by adding more features like.
+
+* User can share the posts.
+* profile page is very basic ,it only have user's post, it can have more features like tumbnail, users personal informmation.
+* user can update his profile.
+* Chat feature for parrent.
+
+
 
 ## Tools & Technologies Used
 
@@ -335,17 +345,6 @@ main pages are Home page (index.html), post detail page(post_detail.html), templ
 * contact_us app has contact-form in form.py as app send mesaages using front end form.
 * contact_us app has 1 main template that a form to send messages.
 * contact_us app has url in urls.py file.
-
-
-
-
-
-
-### GitHub Projects
-
-
-### GitHub Issues
-
 
 
 ## Testing
@@ -480,11 +479,8 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
-### Local VS Deployment
 
-The local version, created on Gitpod, does not have the functionality to send confirmation emails. This is due to the fact that Gitpod blocks the necessary email port required to carry out this operation. Gitpod blocks this port by default due to concerns about email spam and it cannot be changed.
-
-## Credits
+## Credits:
 
 
 
@@ -518,6 +514,7 @@ I have used folloing website for articals that I have posted on my website.
 [Understood](https://www.understood.org/en)
 
 [heallth](https://www.healthyfood.com/)
+
 
 
 
